@@ -7,7 +7,7 @@ a{text-decoration: none;}
 img{border: none;}
 body, section, nav, ul, li, a, div, p{font-family: 'Noto Sans KR', sans-serif; font-size: 16px; font-weight: 300; color: #000;}
 
-#wallpaper{position: relative; background-image: url(./../img/main.jpg); width: 100vw; height: 100vh; background-size: cover;}
+#wallpaper{position: relative; background-image: url(../img/main.jpg); width: 100vw; height: 100vh; background-size: cover;}
 
 .icons{position: relative; display: flex; flex-flow: column wrap; align-content: flex-start; height: 90vh;}
 .icons>li>a{display: block; width: 80px; height: 80px; background-color: #ccc; margin: 20px;}
