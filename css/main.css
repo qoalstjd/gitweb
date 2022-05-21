@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;500;700&display=swap');
+/* font-family: 'Noto Sans KR', sans-serif; */
+
+*{margin: 0; padding: 0;}
+li{list-style: none;}
+a{text-decoration: none;}
+img{border: none;}
+body, section, nav, ul, li, a, div, p{font-family: 'Noto Sans KR', sans-serif; font-size: 16px; font-weight: 300; color: #000;}
+
+#wallpaper{position: relative; background-image: url(../img/main.jpg); width: 100vw; height: 100vh; background-size: cover;}
+
+.icons{position: relative; display: flex; flex-flow: column wrap; align-content: flex-start; height: 90vh;}
+.icons>li>a{display: block; width: 80px; height: 80px; background-color: #ccc; margin: 20px;}
+
+.taskBar{position: absolute; left: 0; bottom: 0; width: 100vw; height: 40px;
+    background: linear-gradient( to bottom, #2561de, #4993e6, #2561de, #2561de, #2561de, #2561de, #2561de, #2561de, #2561de, #143ca0);}
+.taskBar>.start{position: absolute; display: flex; left: 0; top: 0; width: 120px; height: 40px; border-radius: 0 18px 18px 0; box-shadow: 3px 0px 5px rgba(0,0,0,0.3); flex-flow: row wrap; justify-content: center; align-items: center;
+    background: linear-gradient( to bottom, #47ab47, #83bd87, #47ab47, #47ab47, #47ab47, #47ab47, #47ab47, #47ab47, #47ab47, #47ab47);}
+.taskBar>.start>img{width: 30px; height: 30px; align-self: center; margin-right: 5px; text-indent: -7px;}
+.taskBar>.start>p{font-size: 20px; color: #fff; line-height: 40px; text-indent: -7px;}
+.taskBar>.toolBox{position: absolute; right: 0; top: 0; text-align: center; display: flex; flex-flow: row wrap;
+    background: linear-gradient( to bottom, #0d8dea, #16adf0, #0d8dea, #0d8dea, #0d8dea, #0d8dea, #0d8dea, #0d8dea, #0d8dea, #2561de);}
+.taskBar>.toolBox>a{display: block; color: #fff; width: 25px; line-height: 22.5px; height: 25px; margin: 7.5px 10px 0; border: 1px solid #fff; box-sizing: border-box; font-size: 14px; border-radius: 2px; font-weight: 300;}
+.taskBar>.toolBox>p{color: #fff; line-height: 40px; margin-right: 10px;}
