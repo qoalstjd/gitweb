@@ -1,61 +1,49 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bae Minseong &#124; PORTPOLIO</title>
-    <link rel="stylesheet" href="css/main.css" type="text/css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="refresh" content="10;url=main.html">
+  <title>Bae Minseong &#124; PORTPOLIO</title>
+  <link rel="stylesheet" href="css/maina.css">
 </head>
 <body>
-    <!-- Boot S -->
-    <section id="boot">
-        <img class="bootImg" src="img/boot.png" alt="윈도우 부팅이미지">
-        <div class="loading">
-            <div class="gaze"></div>
-            <div class="gaze"></div>
-            <div class="gaze"></div>
-            <div class="gaze"></div>
-            <div class="gaze"></div>
-            <div class="gaze"></div>
-            <div class="gaze"></div>
-            <div class="gaze"></div>
-            <div class="gaze"></div>
-            <div class="gaze"></div>
-            <div class="gaze"></div>
-            <div class="gaze"></div>
-        </div>
-        <p style="color: #fff;">본 페이지는 상업적 목적이 아닌 개인 포트폴리오 용도로 제작되었습니다.<br>Copyright &copy; BaeMinseong</p>
-    </section>
-    <!-- Boot E -->
-
-    <div class="fixed">
-        
+  <!-- Boot S -->
+  <section id="boot">
+    <img class="bootImg" src="img/boot.png" alt="윈도우xp 부팅이미지">
+    <div class="progressBar">
+      <div class="progress">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
     </div>
+    <p class="copy">Copyright &copy; BaeMinseong<br>본 페이지는 상업적 목적이 아닌 개인 포트폴리오 용도로 제작되었습니다.</p>
+  </section>
 
-    <section id="desktop">
-        <ul class="icons">
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
-        </ul>
-        <section class="taskBar">
-            <div class="taskBarInner">
-                <a href="#" class="start"><img src="img/start.jpg" alt=""><p>시작</p></a>
-                <ul>
-                    <li></li>
-                </ul>
-                <a href="#" class="lang">A</a>
-            </div>
-            <div class="toolBox">
-                <p class="time">오전 00:00</p>
-            </div>
-        </section>
-    </section>
+  <script>
+    const boot = document.getElementById("boot")
+    const progress = document.getElementsByClassName("progress")
+    let state = 0
+
+    function loading() {
+      state += 1
+      if (state > 13) {
+        state = 0
+      }
+      progress[0].style.marginLeft = -60 + (20 * state) + "px"
+    }
+
+    setInterval(loading, 1000)
+    setTimeout(function() {
+      boot.style.display = "none"
+    }, 8000)
+  </script>
+  <!-- Boot E -->
+
+  <section id="newStart">
+    <p>새로운 시작</p>
+  </section>
 </body>
 </html>

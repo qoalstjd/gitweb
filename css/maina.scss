@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;500;700&family=Parisienne&display=swap');
+
+// ====================== reset S ======================
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+li{
+  list-style: none;
+}
+
+button{
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+iframe, img{
+  vertical-align: middle;
+  border: none;
+  width: 100%;
+}
+
+html, body, header, section, footer, ul, li, a, h1, h2, h3, h4, h5, h6, p, button, address, strong, em, dl, dt, dd, div, span{
+  font-size: 16px;
+  font-weight: 300;
+  font-family: 'Noto Sans KR', sans-serif;
+  line-height: 1.6em;
+  font-style: normal;
+  color: inherit;
+  box-sizing: border-box;
+}
+
+section{
+  position: relative;
+}
+
+a{
+  text-decoration: none;
+}
+
+// ====================== reset E ======================
+
+// ====================== varibles S ======================
+
+$cl-white : #fff;
+$cl-black : #000;
+
+@mixin absoluteCenter {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+
+// ====================== varibles E ======================
+
+// ====================== index S ======================
+
+#boot{
+  height: 100vh;
+  overflow: hidden;
+  background-color: $cl-black;
+
+  .bootImg {
+    @include absoluteCenter;
+    margin-top: -60px;
+    margin-left: 20px;
+    width: 386px;
+  }
+
+  .progressBar {
+    @include absoluteCenter;
+    width: 226px;
+    height: 28px;
+    border: 2px solid $cl-white;
+    border-radius: 8px;
+    margin-top: 150px;
+    overflow: hidden;
+
+    .progress {
+      position: absolute;
+      display: flex;
+      flex-flow: row nowrap;
+      margin-left: -60px;
+
+      div {
+        width: 18px;
+        height: 20px;
+        margin-top: 2px;
+        margin-left: 2px;
+        border-radius: 2px;
+        background: linear-gradient( to bottom, #393d6f, #51589a, #7d92ea, #7d92ea, #7d92ea, #7d92ea, #7d92ea, #243aa7, #243aa7, #23338c);
+      }
+    }
+  }
+
+  .copy {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    text-align: right;
+    color: $cl-white;
+  }
+}
+
+#newStart {
+  height: 100vh;
+  background: url(../img/new_start.jpg) no-repeat center;
+  background-size: 100% 100%;
+
+  p{
+    @include absoluteCenter;
+    color: $cl-white;
+    font-family: '굴림', sans-serif;
+    font-style: italic;
+    font-size: 32px;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+  }
+}
+
+// ====================== index E ======================
