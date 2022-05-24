@@ -18,7 +18,7 @@ body, section, nav, ul, li, a, div, p{font-family: 'Noto Sans KR', sans-serif; f
 #desktop{position: relative; background-image: url(../img/main.jpg); width: 100vw; height: 100vh; background-size: cover;}
 
 .icons{position: relative; display: flex; flex-flow: column wrap; align-content: flex-start; height: 90vh;}
-.icons>li>a{display: block; width: 80px; height: 80px; background-color: #ccc; margin: 20px;}
+.icons>li>a{display: block; width: 90px; height: 90px; background-color: #ccc; margin: 20px;}
 
 .taskBar{position: absolute; left: 0; bottom: 0; width: 100vw; height: 40px; border-right: 1px solid #173976; display: flex;
     background: linear-gradient( to bottom, #2561de, #4993e6, #2561de, #2561de, #2561de, #2561de, #2561de, #2561de, #2561de, #143ca0);}

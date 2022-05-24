@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;500;700&family=Parisienne&display=swap');
 
 // ====================== reset S ======================
-
 *{
   margin: 0;
   padding: 0;
@@ -40,11 +39,9 @@ section{
 a{
   text-decoration: none;
 }
-
 // ====================== reset E ======================
 
 // ====================== varibles S ======================
-
 $cl-white : #fff;
 $cl-black : #000;
 
@@ -54,15 +51,16 @@ $cl-black : #000;
   top: 50%;
   transform: translate(-50%,-50%);
 }
-
 // ====================== varibles E ======================
 
 // ====================== index S ======================
-
 #boot{
+  @include absoluteCenter;
+  width: 100vw;
   height: 100vh;
   overflow: hidden;
   background-color: $cl-black;
+  z-index: 9;
 
   .bootImg {
     @include absoluteCenter;
@@ -120,5 +118,66 @@ $cl-black : #000;
     text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
   }
 }
-
 // ====================== index E ======================
+
+// ====================== desktop S ======================
+#wallPaper{
+  background-image: url(../img/main.jpg);
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  overflow: hidden;
+
+  .icons{
+    display: flex;
+    flex-flow: column wrap;
+    align-content: flex-start;
+    height: 90vh;
+
+    li>a{
+      display: block;
+      width: 80px;
+      height: 80px;
+      margin: 30px 0 0 20px;
+      text-align: center;
+
+      .ico{
+        display: inline-block;
+        width: 54px;
+        height: 54px;
+        background-color: #ccc;
+        vertical-align: top;
+      }
+
+      .icoTit{
+        color: $cl-white;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+      }
+    }
+  }
+
+  .taskBar{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    background: linear-gradient( to bottom, #2561de, #4993e6, #2561de, #2561de, #2561de, #2561de, #2561de, #2561de, #2561de, #143ca0);
+
+    .taskBarInner{
+      display: flex;
+      flex-flow: row nowrap;
+
+      .start{
+        width: 120px;
+        line-height: 38px;
+        text-align: center;
+        border-radius: 0 18px 18px 0;
+        box-shadow: 3px 0px 5px rgba(0,0,0,0.3);
+        font-size: 24px;
+        color: $cl-white;
+        background: linear-gradient( to bottom, #47ab47, #83bd87, #47ab47, #47ab47, #47ab47, #47ab47, #47ab47, #47ab47, #47ab47, #47ab47);
+      }
+    }
+  }
+}
