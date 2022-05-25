@@ -1,0 +1,38 @@
+https://hianna.tistory.com/
+
+LocalStorage
+
+브라우저에 key-value 값을 Storage에 저장
+저장한 데이터는 세션간에 공유
+세션이 바뀌어도 저장한 데이터가 유지
+
+메소드
+
+setItem(key, value) 키, 값 추가
+getItem(key) 키와 연관된 값을 반환
+removeItem(key) 키, 값을 로컬 스토리지에서 삭제
+length 저장된 변수의 개수
+clear 모든 키, 값 삭제
+key() index로 key값 찾기
+
+데이터 저장
+
+localStorage.setItem("name", minseong)
+localStorage.name = minseong
+
+데이터 읽기
+
+localStorage.getItem("name") // minseong
+localStorage.name // minseong
+
+// setItem
+window.localStorage.setItem('name', 'anna');
+window.localStorage.setItem('age', '20'); 
+// getItem
+const name = window.localStorage.getItem('name');
+const age = window.localStorage.getItem('age'); 
+// 결과 출력
+document.write(name); // anna
+document.write('<br/>');
+document.write(age);  // 20
+
