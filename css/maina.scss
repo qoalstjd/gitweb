@@ -22,7 +22,7 @@ iframe, img{
   width: 100%;
 }
 
-html, body, header, section, footer, ul, li, a, h1, h2, h3, h4, h5, h6, p, button, address, strong, em, dl, dt, dd, div, span{
+html, body, header, section, footer, ul, li, a, h1, h2, h3, h4, h5, h6, p, button, address, strong, em, dl, dt, dd, div, span, input{
   font-size: 16px;
   font-weight: 300;
   font-family: 'Noto Sans KR', sans-serif;
@@ -52,6 +52,49 @@ $cl-black : #000;
   transform: translate(-50%,-50%);
 }
 // ====================== varibles E ======================
+
+// ====================== set S ======================
+article{
+  padding: 60px;
+
+  .h1{
+    font-size: 40px;
+    font-weight: 700;
+    margin: 0 0 30px 0;
+  }
+
+  strong{
+    font-weight: 500;
+  }
+
+  a{
+    color: #d16098;
+  }
+
+  pre{
+    white-space: pre-wrap;
+  }
+
+  p{
+    margin: 1em 0;
+  }
+  
+  img{
+    margin: 30px auto;
+  }
+  
+  .desc-img{
+    color: gray;
+    font-size: 85%;
+    margin-top: -20px;
+    text-align: center;
+  }
+
+  .info{
+    
+  }
+}
+// ====================== set E ======================
 
 // ====================== index S ======================
 #boot{
@@ -120,7 +163,7 @@ $cl-black : #000;
 }
 // ====================== index E ======================
 
-// ====================== desktop S ======================
+// ====================== wallPaper S ======================
 #wallPaper{
   background-image: url(../img/main.jpg);
   width: 100vw;
@@ -155,29 +198,157 @@ $cl-black : #000;
       }
     }
   }
+}
+// ====================== wallPaper E ======================
 
-  .taskBar{
+// ====================== window S ======================
+#window{
+  display: block;
+  @include absoluteCenter;
+  width: 100%;
+  height: calc(100% - 35px);
+  margin-top: -17.5px;
+  border: 3px solid #2561de;
+  border-top: none;
+  border-radius: 8px 8px 0 0;
+  overflow: hidden;
+  background-color: $cl-white;
+
+  .title{
+    height: 35px;
+    background: linear-gradient( to bottom, #2561de, #4993e6, #2561de, #2561de, #2561de, #2561de, #2561de, #2561de, #2561de, #143ca0);
+  }
+  .menu{
+    background-color: #f2f4f1;
+
+    .controls{
+      height: 50px;
+      border-bottom: 1px solid #e3dfd0;
+    }
+    .addressBar{
+      height: 25px;
+      background-color: #f2f4f1;
+  
+      input{
+        width: 80%;
+        height: 25px;
+        border: 1px solid #a5b8c8;
+        line-height: 1em;
+      }
+    }
+  }
+
+  #content{
+    width: 100%;
+    height: calc(100% - 135px);
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+      width: 20px;
+
+      &-track{
+        background-color: #f8f7f3;
+      }
+      &-thumb{
+        background-color: #c6d5fd;
+        border-radius: 4px;
+        border-top: 2px solid #e0e7ef;
+        border-bottom: 2px solid #e0e7ef;
+        background: url(../img/thumb.png) center;
+        background-size: 20px auto;
+      }
+      &-button{
+        &:start:decrement{
+          display: block;
+          height: 20px;
+          background-color: #c6d5fd;
+          background: url(../img/up_btn.png) center;
+          background-size: 20px 20px;
+        }
+        &:end:increment{
+          display: block;
+          height: 20px;
+          background-color: #c6d5fd;
+          background: url(../img/down_btn.png) center;
+          background-size: 20px 20px;
+        }
+      }
+    }
+  }
+
+  .bottom{
     position: absolute;
     left: 0;
     bottom: 0;
     width: 100%;
-    height: 40px;
-    background: linear-gradient( to bottom, #2561de, #4993e6, #2561de, #2561de, #2561de, #2561de, #2561de, #2561de, #2561de, #143ca0);
+    height: 25px;
+    background-color: #ebe8d6;
+  }
+}
+// ====================== window E ======================
 
-    .taskBarInner{
-      display: flex;
-      flex-flow: row nowrap;
+// ====================== taskBar S ======================
+#taskBar{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  width: 100%;
+  height: 35px;
+  background: linear-gradient( to bottom, #2561de, #4993e6, #2561de, #2561de, #2561de, #2561de, #2561de, #2561de, #2561de, #143ca0);
 
-      .start{
-        width: 120px;
-        line-height: 38px;
-        text-align: center;
-        border-radius: 0 18px 18px 0;
-        box-shadow: 3px 0px 5px rgba(0,0,0,0.3);
-        font-size: 24px;
-        color: $cl-white;
-        background: linear-gradient( to bottom, #47ab47, #83bd87, #47ab47, #47ab47, #47ab47, #47ab47, #47ab47, #47ab47, #47ab47, #47ab47);
+  .taskBarInner{
+    flex: 1;
+    position: relative;
+    border-right: 1px solid #666;
+
+    .start{
+      width: 120px;
+      line-height: 33px;
+      text-align: center;
+      border-radius: 0 18px 18px 0;
+      box-shadow: 3px 0px 5px rgba(0,0,0,0.3);
+      font-size: 20px;
+      color: $cl-white;
+      background: linear-gradient( to bottom, #47ab47, #83bd87, #47ab47, #47ab47, #47ab47, #47ab47, #47ab47, #47ab47, #47ab47, #47ab47);
+    }
+
+    .taskList{
+      position: absolute;
+      left: 120px;
+      top: 0;
+
+      li{
+
       }
     }
   }
+
+  .toolBox{
+    position: relative;
+    padding: 0 20px;
+    background: linear-gradient( to bottom, #0d8dea, #16adf0, #0d8dea, #0d8dea, #0d8dea, #0d8dea, #0d8dea, #0d8dea, #0d8dea, #2561de);
+    border-left: 1px solid #26cdf9;
+
+    .lang{
+      position: absolute;
+      left: -32.5px;
+      top: 5px;
+      display: block;
+      width: 25px;
+      height: 25px;
+      line-height: 22.5px;
+      text-align: center;
+      color: $cl-white;
+      border: 1px solid $cl-white;
+      border-radius: 2px;
+    }
+
+    p{
+      text-align: center;
+      line-height: 35px;
+      color: $cl-white;
+    }
+  }
 }
+// ====================== taskBar E ======================
