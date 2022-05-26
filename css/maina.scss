@@ -91,7 +91,20 @@ article{
   }
 
   .info{
-    
+    padding: 35px;
+    background-color: rgba(51,169,220,0.1);
+    border-left: 0.25em solid #33a9dc;
+    color: rgba(0,0,0,0.5);
+  }
+
+  pre{
+    background-color: #fff;
+    margin: 30px -60px;
+    background-color: #282a36;
+
+    .language-javascript{
+
+    }
   }
 }
 // ====================== set E ======================
