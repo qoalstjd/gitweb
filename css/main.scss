@@ -13,7 +13,6 @@ li{
 button{
   border: none;
   background: none;
-  cursor: pointer;
 }
 
 iframe, img{
@@ -45,6 +44,15 @@ a{
 $cl-white : #fff;
 $cl-black : #000;
 
+.hidden{
+  position:absolute !important;  
+  width:1px; 
+  height:1px; 
+  overflow:hidden;
+  clip:rect(1px 1px 1px 1px);
+  clip:rect(1px, 1px, 1px, 1px);
+}
+
 @mixin absoluteCenter {
   position: absolute;
   left: 50%;
@@ -71,10 +79,6 @@ article{
     color: #d16098;
   }
 
-  pre{
-    white-space: pre-wrap;
-  }
-
   p{
     margin: 1em 0;
   }
@@ -98,12 +102,61 @@ article{
   }
 
   pre{
-    background-color: #fff;
+    white-space: pre-wrap;
     margin: 30px -60px;
     background-color: #282a36;
 
-    .language-javascript{
+    code{
+      position: relative;
+      display: block;
+      padding: 30px 60px;
+      font-size: 90%;
+      color: $cl-white;
+      
+      &::before{
+        content: 'code';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: rgba(0,0,0,0.5);
+        background-color: #f4f1ce;
+        height: 1rem;
+        padding: 0 0.5rem;
+        letter-spacing: 0.1em;
+        font-weight: 700;
+        font-size: 0.6rem;
+        line-height: 1rem;
+        text-transform: uppercase;
+      }
 
+      &.language-javascript::before{
+        content: 'javascript';
+        background-color: #6ecd56;
+        color: #fff;
+      }
+
+      .cm-variable{
+        color: #50fa7b;
+      }
+      .cm-property{
+        color: #66d9ef;
+      }
+      .cm-string{
+        color: #f1fa8c;
+      }
+      .cm-keyword{
+        color: #ff79c6;
+      }
+      .cm-def{
+        color: #50fa7b;
+      }
+      .cm-comment{
+        color: #ccc;
+      }
+      .cm-operator {
+        color: #ff79c6;
+      }
     }
   }
 }
@@ -190,7 +243,7 @@ article{
     align-content: flex-start;
     height: 90vh;
 
-    li>a{
+    li>button{
       display: block;
       width: 80px;
       height: 80px;
@@ -214,8 +267,8 @@ article{
 }
 // ====================== wallPaper E ======================
 
-// ====================== window S ======================
-#window{
+// ====================== layer S ======================
+#layer{
   display: block;
   @include absoluteCenter;
   width: 100%;
@@ -226,11 +279,43 @@ article{
   border-radius: 8px 8px 0 0;
   overflow: hidden;
   background-color: $cl-white;
+  width: 80%;
+  display: none;
 
   .title{
     height: 35px;
     background: linear-gradient( to bottom, #2561de, #4993e6, #2561de, #2561de, #2561de, #2561de, #2561de, #2561de, #2561de, #143ca0);
+
+    .btns{
+      position: absolute;
+      right: 5px;
+      top: 7px;
+      display: flex;
+      gap: 4px;
+
+      button{
+        display: block;
+        width: 24px;
+        height: 24px;
+        background-color: #fff;
+        border-radius: 4px;
+
+        &.minimizationBtn{
+          background-image: url(../img/minimization.png);
+          background-size: 100%;
+        }
+        &.maximizeBtn{
+          background-image: url(../img/maximize.png);
+          background-size: 100%;
+        }
+        &.closeBtn{
+          background-image: url(../img/close.png);
+          background-size: 100%;
+        }
+      }
+    }
   }
+
   .menu{
     background-color: #f2f4f1;
 
@@ -298,7 +383,7 @@ article{
     background-color: #ebe8d6;
   }
 }
-// ====================== window E ======================
+// ====================== layer E ======================
 
 // ====================== taskBar S ======================
 #taskBar{
@@ -357,7 +442,7 @@ article{
       border-radius: 2px;
     }
 
-    p{
+    .time{
       text-align: center;
       line-height: 35px;
       color: $cl-white;
