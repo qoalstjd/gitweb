@@ -611,90 +611,106 @@ article{
       position: absolute;
       right: 0;
       bottom: 35px;
-      width: 500px;
-      border: 5px solid #587dd5;
+      width: 400px;
+      border: 7px solid #a0d29a;
       background-color: #fff;
       border-radius: 6px;
       padding: 15px;
       display: none;
-    }
+      
+      .today{
+        text-align: center;
+        margin-bottom: 15px;
+        color: #587dd5;
+      }
+      
+      .ccWrap{
+        display: flex;
+        flex-flow: row wrap;
+        
+        .calendar{
+          width: 60%;
 
-    .today{
-      text-align: center;
-      margin-bottom: 15px;
-      color: #587dd5;
-    }
+          .title{
+            position: relative;
+            margin-bottom: 5px;
 
-    .ccWrap{
-      display: flex;
-      flex-flow: row wrap;
-    }
+            .yearMonth{
+              display: block;
+              width: 100%;
+              text-align: center;
+            }
 
-    .calendar{
-      width: 60%;
-    }
+            .btn{
+              position: absolute;
+              top: 0;
 
-    .title{
-      position: relative;
-    }
+              &.prevMonth{
+                left: 0;
+              }
 
-    .title .yearMonth{
-      display: block;
-      width: 100%;
-      text-align: center;
-    }
+              &.nextMonth{
+                right: 0;
+              }
+            }
+          }
 
-    .title .btn{
-      position: absolute;
-      top: 0;
-    }
-    .title button.prevMonth{
-      left: 0;
-    }
-    .title button.nextMonth{
-      right: 0;
-    }
+          .content{
+            .days{
+              display: flex;
+              flex-flow: row wrap;
+              text-align: center;
+              border-bottom: 0.1em solid #ddd;
 
-    .title .yearMonth{
-      text-align: center;
-    }
+              .day{
+                width: calc(100% / 7);
+              }
+            }
 
-    .content .days{
-      display: flex;
-      flex-flow: row wrap;
-      text-align: center;
-      border-bottom: 0.1em solid #ddd;
-    }
-    .content .days li{
-      width: calc(100% / 7);
-      line-height: 1.2em;
-    }
+            .dates{
+              display: flex;
+              flex-flow: row wrap;
+              text-align: center;
 
-    .content .dates{
-      display: flex;
-      flex-flow: row wrap;
-      text-align: center;
-    }
+              .date{
+                width: calc(100% / 7);
 
-    .content .dates .date{
-      width: calc(100% / 7);
-    }
+                span{
+                  display: block;
+                  border: 1px solid transparent;
+                  line-height: 1.2em;
 
-    .content .dates .date span{
-      display: block;
-      border: 1px solid transparent;
-      line-height: 1.2em;
-    }
+                  &.other{
+                    color: #aaa;
+                  }
 
-    .other {
-      color: #aaa;
-    }
+                  &.curday{
+                    display: block;
+                    border-color: blue;
+                    background-color: skyblue;
+                    border-radius: 4px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
 
-    .content .dates .date .curday {
-      display: block;
-      border-color: blue;
-      background-color: skyblue;
-      border-radius: 4px;
+      .clock{
+        width: 40%;
+
+        .clockImg{
+          width: 100%;
+          height: 160px;
+          background: url(../img/clock.png) no-repeat center;
+          background-size: 95%;
+        }
+
+        p{
+          text-align: center;
+        }
+      }
     }
   }
 }

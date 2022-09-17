@@ -8,7 +8,11 @@ document.querySelector('.today').textContent = today.getFullYear() + "년 " + (t
 // 시간 포메팅
 function getFullHmsStr(){
 today = new Date();
-// document.querySelector('.time').textContent = today.getHours() + "시 " + today.getMinutes() + "분 " + today.getSeconds() + "초 ";
+  if(today.getHours() > 12) {
+    document.querySelector('.clockTime').textContent = "오후 " + today.getHours() - 12 + ":" + today.getMinutes() + ":" + today.getSeconds();
+  }else {
+    document.querySelector('.clockTime').textContent = "오전 " + today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+  }
 }
 
 getFullYmdStr()

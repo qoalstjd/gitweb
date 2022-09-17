@@ -247,7 +247,8 @@
             </div>
           </div>
           <div class="clock">
-            <p class="">오후 00:00:00</p>
+            <div class="clockImg"></div>
+            <p class="clockTime">오후 00:00:00</p>
           </div>
         </div>
       </div>
@@ -277,7 +278,7 @@
     function getHMStr(){
       time = new Date();
       if(time.getHours() > 12) {
-        document.querySelector('.time').textContent = "오후 " + time.getHours() + ":" + time.getMinutes();
+        document.querySelector('.time').textContent = "오후 " + time.getHours() - 12 + ":" + time.getMinutes();
       }else {
         document.querySelector('.time').textContent = "오전 " + time.getHours() + ":" + time.getMinutes();
       }
