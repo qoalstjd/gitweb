@@ -9,9 +9,11 @@ document.querySelector('.today').textContent = today.getFullYear() + "년 " + (t
 function getFullHmsStr(){
 today = new Date();
   if(today.getHours() > 12) {
-    document.querySelector('.clockTime').textContent = "오후 " + today.getHours() - 12 + ":" + today.getMinutes() + ":" + today.getSeconds();
+    document.querySelector('.clockTime').textContent = `오후 ${today.getHours() - 12} : ${today.getMinutes()} : ${today.getSeconds()}`
+  }else if(today.getHours() < 10) {
+    document.querySelector('.clockTime').textContent = `오전 0${today.getHours()} : ${today.getMinutes()} : ${today.getSeconds()}`
   }else {
-    document.querySelector('.clockTime').textContent = "오전 " + today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+    document.querySelector('.clockTime').textContent = `오전 ${today.getHours()} : ${today.getMinutes()} : ${today.getSeconds()}`
   }
 }
 

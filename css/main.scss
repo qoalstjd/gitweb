@@ -562,6 +562,10 @@ article{
       height: 36px;
       background-image: url(../img/start.png);
 
+      &.on{
+        background-image: url(../img/start_on.png);
+      }
+
       p{
         font-size: 20px;
         margin-bottom: 4px;
@@ -574,10 +578,6 @@ article{
       position: absolute;
       left: 120px;
       top: 0;
-
-      li{
-
-      }
     }
   }
 
