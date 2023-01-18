@@ -1,5 +1,5 @@
 {
-  "name": "window-xp",
+  "name": "windows-xp",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -51,5 +51,6 @@
     "last 2 versions",
     "not dead",
     "not ie 11"
-  ]
+  ],
+  "homepage": "https://qoalsltjd.github.io/windowsXP"
 }
