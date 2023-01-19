@@ -24,9 +24,13 @@
         </div>
         <div class="menu"></div>
         <div class="content">
-          <div v-for="file in task.content" :key="file.id">
-            <p>{{ file.id }}. {{ file.name }}</p>
-          </div>
+          <ul>
+            <li v-for="(file, i) in task.content" :key="i">
+              <a href="javascript:void(0)">
+                <p>{{ i + 1 }}. {{ file.name }}</p>
+              </a>
+            </li>
+          </ul>
         </div>
         <div class="layerTaskbar"></div>
       </div>
@@ -35,7 +39,7 @@
     <section class="taskbar">
       <button class="start" onclick="menuOpen()"><p>시작</p></button>
       <ul class="taskList">
-        <li v-for="task in taskList" :key="task.id">
+        <li v-for="(task, i) in taskList" :key="i">
           <img :src="task.icoPath" alt="" />
           <p>{{ task.title }}</p>
         </li>
@@ -101,24 +105,24 @@ export default {
           icoPath: require('@/assets/img/dir.png'),
           title: 'JavaScript',
           content: [
-            { id: 1, name: '기본 개념과 동작 원리 이해의 중요성' },
-            { id: 2, name: '기본 개념과 동작 원리 이해의 중요성' }
+            { icoPath: 0, name: '기본 개념과 동작 원리 이해의 중요성.txt' },
+            { icoPath: 1, name: '기본 개념과 동작 원리 이해의 중요성.txt' }
           ]
         },
         {
           icoPath: require('@/assets/img/dir.png'),
           title: 'Vue',
           content: [
-            { id: 1, name: '기본 개념과 동작 원리 이해의 중요성' },
-            { id: 2, name: '기본 개념과 동작 원리 이해의 중요성' }
+            { icoPath: 0, name: '기본 개념과 동작 원리 이해의 중요성.txt' },
+            { icoPath: 1, name: '기본 개념과 동작 원리 이해의 중요성.txt' }
           ]
         },
         {
           icoPath: require('@/assets/img/dir.png'),
           title: 'React',
           content: [
-            { id: 1, name: '기본 개념과 동작 원리 이해의 중요성' },
-            { id: 2, name: '기본 개념과 동작 원리 이해의 중요성' }
+            { icoPath: '', name: '기본 개념과 동작 원리 이해의 중요성.txt' },
+            { icoPath: '', name: '기본 개념과 동작 원리 이해의 중요성.txt' }
           ]
         }
       ],
