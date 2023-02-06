@@ -1,5 +1,6 @@
 import { authService } from "../fb";
 import { signInWithEmailAndPassword } from "firebase/auth";
+import { useState } from "react";
 import styled from "styled-components";
 
 const StyledAuth = styled.section`
@@ -39,19 +40,18 @@ const Auth = ({ setSignned }) => {
   };
 
   // 정보제출
-  const onSubmit = event => {
+  const onSubmit = async event => {
     event.preventDefault();
-    // signInWithEmailAndPassword(authService, "admin@admin.com", adminPassword)
-    //   .then(userCredential => {
-    //     const user = userCredential.user;
-    //     console.log(user);
-    //     setSignned(true);
-    //   })
-    //   .catch(error => {
-    //     const errorCode = error.code;
-    //     const errorMessage = error.message;
-    //     console.log(errorCode + errorMessage);
-    //   });
+    try {
+      await signInWithEmailAndPassword(authService, "admin@admin.com", adminPassword)
+      .then(userCredential => {
+        const user = userCredential.user;
+        console.log(user);
+        setSignned(true);
+      })
+    } catch (error) {
+      console.log(error.code + error.message);
+    }
   };
 
   return (

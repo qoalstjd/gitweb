@@ -1,12 +1,24 @@
-import Wallpaper from "../view/Wallpaper";
-import Auth from "../view/Auth";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { authService } from "../fb";
+import Router from "./Router"
+
 import "../css/reset.css";
 import "../css/common.css";
 
 const App = () => {
-  const [signned, setSignned] = useState(false);
-  return <>{signned ? <Wallpaper /> : <Auth setSignned={setSignned} />}</>;
+  const [init, setInit] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  useEffect(() => {
+    authService.onAuthStateChanged(user => {
+      if (user) {
+        setIsLoggedIn(true);
+      } else {
+        setIsLoggedIn(false);
+      }
+      setInit(true);
+    });
+  }, []);
+  return (<>{init ? <Router isLoggedIn={isLoggedIn} /> : "잠시만 기다려 주세요!"}</>);
 };
 
 export default App;
