@@ -1,7 +1,5 @@
 <template>
-  <section>
-    <h2>Directory</h2>
-  </section>
+  <section></section>
 </template>
 
 <script>
@@ -10,6 +8,8 @@ export default {};
 
 <style scoped lang="scss">
 section {
-  @include abCenter;
+  position: relative;
+  height: 36px;
+  background: url(./../assets/img/bar.png);
 }
 </style>

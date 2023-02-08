@@ -1,0 +1,16 @@
+@mixin abCenter() {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin ico($wh, $bpX, $bpY) {
+  display: inline-block;
+  width: $wh + px;
+  height: $wh + px;
+  background: url(../assets/img/splite_ico.png) no-repeat;
+  background-position: $bpX + px $bpX + px;
+  background-size: 500%;
+  vertical-align: top;
+}

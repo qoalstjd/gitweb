@@ -1,0 +1,68 @@
+<template>
+  <div>
+    <div class="layer" v-if="task.type === 'dir'">
+      <div class="title">
+        <img :src="task.icoPath" alt="" />
+        <p>{{ task.title }}</p>
+        <div class="btns">
+          <button onclick="minimization()"><span class="hidden">최소화</span></button>
+          <button onclick="maximize()"><span class="hidden">최대화</span></button>
+          <button @click="layerClose"><span class="hidden">닫기</span></button>
+        </div>
+      </div>
+      <div class="menu"></div>
+      <div class="content">
+        <ul>
+          <li v-for="(file, i) in task.content" :key="i">
+            <Txt :file="file" />
+            <a href="javascript:void(0)" @click="txtOpen">
+              <p>{{ i + 1 }}. {{ file.name }}</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="layerTaskbar"></div>
+    </div>
+  </div>
+</template>
+
+<script>
+import Txt from '@/components/Txt.vue'
+export default {
+  components: { Txt },
+  data() {
+    return {
+      sampleData: ''
+    }
+  },
+  props: { task: Object },
+  methods: {
+    layerClose() {
+      this.$emit('layer-close')
+    },
+    txtOpen() {
+      console.log(this.file)
+    }
+  }
+}
+</script>
+
+<style scoped lang="scss">
+.layer {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 500px;
+  margin-top: -18px;
+  border: 3px solid #005aeb;
+  border-top: none;
+  border-radius: 8px 8px 0 0;
+  overflow: hidden;
+  background-color: #fff;
+}
+.title {
+  display: flex;
+}
+</style>

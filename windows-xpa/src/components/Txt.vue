@@ -6,10 +6,9 @@
 export default {
   components: {},
   data() {
-    return {
-      sampleData: ''
-    }
+    return {}
   },
+  props: { file: Object },
   setup() {},
   created() {},
   mounted() {},
