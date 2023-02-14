@@ -54,7 +54,133 @@
     </script>
 </head>
 <body>
-    <? include("header.html")?>
+  <header id="header">
+    <h1 class="logo"><a href="index.html"><img src="img/logo_white.png" alt="삼성물산"></a></h1>
+    <nav class="gnb">
+            <ul class="floatParents">
+              <li><a href="business.html">사업소개</a></li>
+                <li><a href="about.html">부문소개</a>
+                    <ul class="subMenu">
+                        <li><a href="about.html">Overview</a></li>
+                        <li><a href="about.html">History</a></li>
+                        <li><a href="about.html">Vision</a></li>
+                    </ul>
+                </li>
+                <li><a href="landmark.html">랜드마크</a>
+                    <ul class="subMenu">
+                        <li><a href="landmark.html">부르즈 칼리파</a></li>
+                        <li><a href="landmark.html">인천대교</a></li>
+                        <li><a href="landmark.html">원자력발전</a></li>
+                        <li><a href="landmark.html">래미안</a></li>
+                    </ul>
+                </li>
+                <li><a href="tech.html">기술혁신</a>
+                    <ul class="subMenu">
+                        <li><a href="tech.html">기술팀</a></li>
+                        <li><a href="tech.html">지식재산권</a></li>
+                    </ul>
+                </li>
+                <li><a href="promotion.html">홍보센터</a>
+                    <ul class="subMenu">
+                        <li><a href="promotion.html">보도자료</a></li>
+                        <li><a href="promotion.html">홍보자료</a></li>
+                    </ul>
+                </li>
+                <li><a href="recruit.html">인재채용</a>
+                    <ul class="subMenu">
+                        <li><a href="recruit.html">채용안내</a></li>
+                        <li><a href="recruit.html">직무소개</a></li>
+                        <li><a href="recruit.html">인사제도</a></li>
+                        <li><a href="recruit.html">채용FAQ</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <ul class="util floatParents">
+            <li>
+                <button></button>
+            </li>
+            <li class="lang">
+                <button></button>
+                <div>
+                    <a href="#">한국어</a>
+                    <a href="#">영어</a>
+                </div>
+            </li>
+            <li>
+                <button class="menuBtn">
+                    <div></div>
+                    <div></div>
+                    <span>MENU</span>
+                </button>
+            </li>
+        </ul>
+        <div class="gnbBg"></div>
+    </header>
+    
+    <div id="menu">
+        <h1 class="logo"><a href="index.html"><img src="img/logo_white.png" alt="삼성물산"></a></h1>
+        <div class="leftBg"></div>
+        <nav class="gnb">
+            <ul class="floatParents">
+                <li><a href="business.html">사업소개</a></li>
+                <li><a href="about.html">부문소개</a>
+                    <ul class="subMenu">
+                        <li><a href="about.html">Overview</a></li>
+                        <li><a href="about.html">History</a></li>
+                        <li><a href="about.html">Vision</a></li>
+                    </ul>
+                </li>
+                <li><a href="landmark.html">랜드마크</a>
+                    <ul class="subMenu">
+                        <li><a href="landmark.html">부르즈 칼리파</a></li>
+                        <li><a href="landmark.html">인천대교</a></li>
+                        <li><a href="landmark.html">원자력발전</a></li>
+                        <li><a href="landmark.html">래미안</a></li>
+                    </ul>
+                </li>
+                <li><a href="tech.html">기술혁신</a>
+                    <ul class="subMenu">
+                        <li><a href="tech.html">기술팀</a></li>
+                        <li><a href="tech.html">지식재산권</a></li>
+                    </ul>
+                </li>
+                <li><a href="promotion.html">홍보센터</a>
+                    <ul class="subMenu">
+                        <li><a href="promotion.html">보도자료</a></li>
+                        <li><a href="promotion.html">홍보자료</a></li>
+                    </ul>
+                </li>
+                <li><a href="recruit.html">인재채용</a>
+                    <ul class="subMenu">
+                        <li><a href="recruit.html">채용안내</a></li>
+                        <li><a href="recruit.html">직무소개</a></li>
+                        <li><a href="recruit.html">인사제도</a></li>
+                        <li><a href="recruit.html">채용FAQ</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <ul class="util floatParents">
+            <li>
+                <button></button>
+            </li>
+            <li class="lang">
+                <button></button>
+                <div>
+                    <a href="#">한국어</a>
+                    <a href="#">영어</a>
+                </div>
+            </li>
+            <li>
+                <button class="menuBtn">
+                    <div></div>
+                    <div></div>
+                    <span>MENU</span>
+                </button>
+            </li>
+        </ul>
+    </div>
 
     <div id="menu">
         <h1 class="logo"><a href="index.html"><img src="img/logo_white.png" alt="삼성물산"></a></h1>
@@ -189,6 +315,25 @@
         </div>
     </section>
 
-    <? include("footer.html")?>
+    <footer id="footer">
+        <p class="copy">COPYRIGHT &copy; 배민성 ALL RIGHTS RESERVED.</p>
+        <ul class="fnb floatParents">
+            <li><a href="#">개인정보 처리방침</a></li>
+            <li><a href="#">개인정보 수집 출처 및 처리 목적</a></li>
+            <li><a href="#">윤리경영</a></li>
+            <li><a href="#">고객센터</a></li>
+        </ul>
+        <div class="family"><a href="#">패밀리 사이트 +</a>
+            <ul>
+                <li><a href="https://www.samsungcnt.com" target="blank">삼성물산</a></li>
+                <li><a href="https://www.raemian.co.kr/main.do" target="blank">래미안</a></li>
+                <li><a href="https://blog.naver.com/samsungblueprint" target="blank">건설부문 블로그</a></li>
+                <li><a href="https://www.samsungfashion.com/contents/home.jsp" target="blank">패션부문</a></li>
+                <li><a href="http://rnc.samsungcnt.com/" target="blank">리조트부문</a></li>
+                <li><a href="https://www.secc-partners.co.kr/oamLogin.jsp" target="blank">Partners Potal</a></li>
+                <li><a href="http://www.withsamsung.co.kr/ko/html/main/index.html" target="blank">e-사이버감사팀</a></li>
+            </ul>
+        </div>
+    </footer>
 </body>
 </html>

@@ -1,346 +1,574 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>삼성물산 건설_랜드마크</title>
-    <link rel="stylesheet" href="css/common.css" type="text/css">
-    <link rel="stylesheet" href="css/sub.css" type="text/css">
+    <link rel="stylesheet" href="css/common.css" type="text/css" />
+    <link rel="stylesheet" href="css/sub.css" type="text/css" />
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/common.js"></script>
     <script>
-        $(function(){
-            var scrollHeight = $(window).height() ;
-            var scrollNum=0;
-            var resizeNum=0
-            var documentWidth = $(window).width()
+      $(function () {
+        var scrollHeight = $(window).height();
+        var scrollNum = 0;
+        var resizeNum = 0;
+        var documentWidth = $(window).width();
 
-            function move(){
-                $("html,body").stop(true).animate({ scrollTop: scrollHeight*(resizeNum)}, 700);
-            }
-            
-            $('#landmarkBanner .tabsTitle>li').each(function(index){
-                $(this).click(function(){
-                    $('#landmarkContents>div').eq(index).css('display','block').siblings().css('display','none')
-                    scrollNum=1;
-                    resizeNum=1;
-                    move();
-                })
-            })
+        function move() {
+          $("html,body")
+            .stop(true)
+            .animate({ scrollTop: scrollHeight * resizeNum }, 700);
+        }
 
-            $('.tabsTitle>li').each(function(index){
-                $(this).click(function(){
-                    $('#landmarkContents>div').eq(index).css('display','block').siblings().css('display','none')
-                })
-            })
-            $('.tech .controls .nextBtn').click(function(){
-                event.preventDefault()
-                $('.tech ul>li').eq(5).addClass('select').siblings().removeClass('select')
-                $('.tech ul>li').eq(0).appendTo('.tech ul')
-            })
-            $('.tech .controls .prevBtn').click(function(){
-                event.preventDefault()
-                $('.tech ul>li').eq(8).prependTo('.tech ul')
-                $('.tech ul>li').eq(4).addClass('select').siblings().removeClass('select')
-            })
-        })
+        $("#landmarkBanner .tabsTitle>li").each(function (index) {
+          $(this).click(function () {
+            $("#landmarkContents>div").eq(index).css("display", "block").siblings().css("display", "none");
+            scrollNum = 1;
+            resizeNum = 1;
+            move();
+          });
+        });
+
+        $(".tabsTitle>li").each(function (index) {
+          $(this).click(function () {
+            $("#landmarkContents>div").eq(index).css("display", "block").siblings().css("display", "none");
+          });
+        });
+        $(".tech .controls .nextBtn").click(function () {
+          event.preventDefault();
+          $(".tech ul>li").eq(5).addClass("select").siblings().removeClass("select");
+          $(".tech ul>li").eq(0).appendTo(".tech ul");
+        });
+        $(".tech .controls .prevBtn").click(function () {
+          event.preventDefault();
+          $(".tech ul>li").eq(8).prependTo(".tech ul");
+          $(".tech ul>li").eq(4).addClass("select").siblings().removeClass("select");
+        });
+      });
     </script>
-</head>
-<body>
-    <? include("header.html");?>
+  </head>
+  <body>
+    <header id="header">
+      <h1 class="logo">
+        <a href="index.html"><img src="img/logo_white.png" alt="삼성물산" /></a>
+      </h1>
+      <nav class="gnb">
+        <ul class="floatParents">
+          <li><a href="business.html">사업소개</a></li>
+          <li>
+            <a href="about.html">부문소개</a>
+            <ul class="subMenu">
+              <li><a href="about.html">Overview</a></li>
+              <li><a href="about.html">History</a></li>
+              <li><a href="about.html">Vision</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="landmark.html">랜드마크</a>
+            <ul class="subMenu">
+              <li><a href="landmark.html">부르즈 칼리파</a></li>
+              <li><a href="landmark.html">인천대교</a></li>
+              <li><a href="landmark.html">원자력발전</a></li>
+              <li><a href="landmark.html">래미안</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="tech.html">기술혁신</a>
+            <ul class="subMenu">
+              <li><a href="tech.html">기술팀</a></li>
+              <li><a href="tech.html">지식재산권</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="promotion.html">홍보센터</a>
+            <ul class="subMenu">
+              <li><a href="promotion.html">보도자료</a></li>
+              <li><a href="promotion.html">홍보자료</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="recruit.html">인재채용</a>
+            <ul class="subMenu">
+              <li><a href="recruit.html">채용안내</a></li>
+              <li><a href="recruit.html">직무소개</a></li>
+              <li><a href="recruit.html">인사제도</a></li>
+              <li><a href="recruit.html">채용FAQ</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <ul class="util floatParents">
+        <li>
+          <button></button>
+        </li>
+        <li class="lang">
+          <button></button>
+          <div>
+            <a href="#">한국어</a>
+            <a href="#">영어</a>
+          </div>
+        </li>
+        <li>
+          <button class="menuBtn">
+            <div></div>
+            <div></div>
+            <span>MENU</span>
+          </button>
+        </li>
+      </ul>
+      <div class="gnbBg"></div>
+    </header>
+
+    <div id="menu">
+      <h1 class="logo">
+        <a href="index.html"><img src="img/logo_white.png" alt="삼성물산" /></a>
+      </h1>
+      <div class="leftBg"></div>
+      <nav class="gnb">
+        <ul class="floatParents">
+          <li><a href="business.html">사업소개</a></li>
+          <li>
+            <a href="about.html">부문소개</a>
+            <ul class="subMenu">
+              <li><a href="about.html">Overview</a></li>
+              <li><a href="about.html">History</a></li>
+              <li><a href="about.html">Vision</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="landmark.html">랜드마크</a>
+            <ul class="subMenu">
+              <li><a href="landmark.html">부르즈 칼리파</a></li>
+              <li><a href="landmark.html">인천대교</a></li>
+              <li><a href="landmark.html">원자력발전</a></li>
+              <li><a href="landmark.html">래미안</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="tech.html">기술혁신</a>
+            <ul class="subMenu">
+              <li><a href="tech.html">기술팀</a></li>
+              <li><a href="tech.html">지식재산권</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="promotion.html">홍보센터</a>
+            <ul class="subMenu">
+              <li><a href="promotion.html">보도자료</a></li>
+              <li><a href="promotion.html">홍보자료</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="recruit.html">인재채용</a>
+            <ul class="subMenu">
+              <li><a href="recruit.html">채용안내</a></li>
+              <li><a href="recruit.html">직무소개</a></li>
+              <li><a href="recruit.html">인사제도</a></li>
+              <li><a href="recruit.html">채용FAQ</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <ul class="util floatParents">
+        <li>
+          <button></button>
+        </li>
+        <li class="lang">
+          <button></button>
+          <div>
+            <a href="#">한국어</a>
+            <a href="#">영어</a>
+          </div>
+        </li>
+        <li>
+          <button class="menuBtn">
+            <div></div>
+            <div></div>
+            <span>MENU</span>
+          </button>
+        </li>
+      </ul>
+    </div>
 
     <section id="landmarkBanner" class="box">
-        <div class="bannerText">
-            <h2 class="contentTitle">부르즈 칼리파</h2>
-            <h3 class="sectionTitle">하늘에서 가장 먼저 닿는 그 곳에 삼성물산 건설부문이 있습니다.</h3>
-            <p>세계 초일류를 향한 끝없는 도전정신과 불굴의 의지로 새로운 스카이라인을 만들어갑니다.</p>
-            <ul class="tabsTitle floatParents">
-                <li><a href="#">
-                    <div class="tabsIcon"></div>
-                    <p>ThemeView</p>
-                </a></li>
-                <li><a href="#">
-                    <div class="tabsIcon"></div>
-                    <p>Technology</p>
-                </a></li>
-                <li><a href="#">
-                    <div class="tabsIcon"></div>
-                    <p>News</p>
-                </a></li>
-            </ul>
-        </div>
+      <div class="bannerText">
+        <h2 class="contentTitle">부르즈 칼리파</h2>
+        <h3 class="sectionTitle">하늘에서 가장 먼저 닿는 그 곳에 삼성물산 건설부문이 있습니다.</h3>
+        <p>세계 초일류를 향한 끝없는 도전정신과 불굴의 의지로 새로운 스카이라인을 만들어갑니다.</p>
+        <ul class="tabsTitle floatParents">
+          <li>
+            <a href="#">
+              <div class="tabsIcon"></div>
+              <p>ThemeView</p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div class="tabsIcon"></div>
+              <p>Technology</p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div class="tabsIcon"></div>
+              <p>News</p>
+            </a>
+          </li>
+        </ul>
+      </div>
     </section>
 
     <section id="landmarkContents">
-        <div class="themeView">
-            <ul>
-                <li class="box">
-                    <div class="titleBox">
-                        <h2 class="contentTitle">WORLD NO.1</h2>
-                        <h3 class="sectionTitle">총 높이 828M 163층(세계 최고높이) / 총 연면적 15만평 호텔 (200실), 사무실 및 주거빌딩</h3>
-                    </div>
-                    <ul class="buildingList floatParents">
-                        <li>
-                            <p class="height">828m</p>
-                            <img src="img/burj_building0.png" alt="부르즈 칼리파">
-                            <a href="#">Burj Khalifa</a>
-                        </li>
-                        <li>
-                            <p class="height">508m</p>
-                            <img src="img/burj_building1.png" alt="타이페이 101">
-                            <a href="#">Taipei 101</a>
-                        </li>
-                        <li>
-                            <p class="height">452m</p>
-                            <img src="img/burj_building2.png" alt="페트로나스 트윈 타워">
-                            <a href="#">Petronas Towers</a>
-                        </li>
-                        <li>
-                            <p class="height">442m</p>
-                            <img src="img/burj_building3.png" alt="시어 타워">
-                            <a href="#">Sears Towers</a>
-                        </li>
-                        <li>
-                            <p class="height">381m</p>
-                            <img src="img/burj_building4.png" alt="엠파이어 스테이트 빌딩">
-                            <a href="#">Empire State</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="box">
-                    <ul class="theme">
-                        <li>
-                            <div class="themeViewImg"></div>
-                            <div class="textBox">
-                                <h3 class="sectionTitle"><span>58</span> ELEVATORS</h3>
-                                <p>부르즈 칼리파의 전체 엘리베이터 개수는 총 58대 가장 빠른 엘레베이터의 경우 124층 전망대까지 45초</p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="themeViewImg"></div>
-                            <div class="textBox">
-                                <h3 class="sectionTitle">WEIGHT <span>430</span></h3>
-                                <p>600m 상공에 올려진 첨탑 구조물 무게 430t, 길이 233m</p>
-                            </div>
-                        </li>
-                    </ul>
-                </li>
-                <li class="box">
-                    <ul class="theme">
-                        <li>
-                            <div class="themeViewImg"></div>
-                            <div class="textBox">
-                                <h3 class="sectionTitle"><span>28,601</span> CURTAIN WALL</h3>
-                                <p>커튼월 28601 여장으로 건물 외관을 이루는 벽을 만들고 바람, 비, 햇볕으로부터 건물 내부를 보호</p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="themeViewImg"></div>
-                            <div class="textBox">
-                                <h3 class="sectionTitle"><span>7,000,000</span> PEOPLE</h3>
-                                <p>50개국 7,000,000명이 참여한 대규모 공사 일일 최대 1만 2천명에 달하는 대규모 공사인력</p>
-                            </div>
-                        </li>
-                    </ul>
-                </li>
-                <li class="box">
-                    <ul class="theme">
-                        <li>
-                            <div class="themeViewImg"></div>
-                            <div class="textBox">
-                                <h3 class="sectionTitle"><span>코끼리</span></h3>
-                                <p>5t 아프리카 코끼리 10만마리 = 부르즈칼리파 총 하중 540,000t</p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="themeViewImg"></div>
-                            <div class="textBox">
-                                <h3 class="sectionTitle"><span>지구 반바퀴</span></h3>
-                                <p>사용된 철근의 총 길이는 25,000km이며(지구반 바퀴를 돌 수 있는 길이) 무게는 총 62,200t</p>
-                            </div>
-                        </li>
-                    </ul>
-                </li>
-                <li class="box">
-                    <ul class="theme">
-                        <li>
-                            <div class="themeViewImg"></div>
-                            <div class="textBox">
-                                <h3 class="sectionTitle"><span>TWICE</span></h3>
-                                <p>삼성동 코엑스 몰(119,009㎡)의 4배<br>여의도 공원(218,183㎡)의 2배<br>잠실운동장(8,265㎡)의 56배</p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="themeViewImg"></div>
-                            <div class="textBox">
-                                <h3 class="sectionTitle"><span>대나무</span></h3>
-                                <p>대나무의 마디를 형상화 약 30층마다 건물의변형을 방지할 수 있도록 특별히 견고하게 설계된 층을 통해 바람에 의한 변형을 막았다</p>
-                            </div>
-                        </li>
-                    </ul>
-                </li>
-                <li class="box">
-                    <ul class="floatParents">
-                        <li>
-                            <div class="textBox">
-                                <h3 class="sectionTitle"><span>자동상승</span></h3>
-                                <p>거푸집 자동 상승 시스템 (콘크리트를 타설 후 콘크리트가 굳으면 자동으로 거푸집이 한층 올라가는 시스템)을 통해 3일에 한 층을 건설하는 신기원을 이룩했다.</p>
-                            </div>
-                            <img src="img/themeview_detail0.png" alt="">
-                        </li>
-                        <li>
-                            <div class="textBox">
-                                <h3 class="sectionTitle"><span>바람</span></h3>
-                                <p>초속 40미터의 바람을 이기기 위해 사막에 핀 꽃을 형상화 평면이 나선형 패턴으로 면적이 단계적으로 16회 축소하여 바람을 혼란시킨다.</p>
-                            </div>
-                            <img src="img/themeview_detail1.png" alt="">
-                        </li>
-                        <li>
-                            <div class="textBox">
-                                <h3 class="sectionTitle"><span>인공위성</span></h3>
-                                <p>지상에서 1도만 틀어져도 800m 상공에선 14m 차이가 나기 때문에 도입한 3대의 인공위성을 통한 위성 GPS 측량 시스템</p>
-                            </div>
-                            <img src="img/themeview_detail2.png" alt="">
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-        <div class="tech box">
+      <div class="themeView">
+        <ul>
+          <li class="box">
             <div class="titleBox">
-                <h3 class="sectionTitle">초고층 핵심기술력</h3>
-                <h2 class="contentTitle">BURJ KHALIFA</h2>
+              <h2 class="contentTitle">WORLD NO.1</h2>
+              <h3 class="sectionTitle">
+                총 높이 828M 163층(세계 최고높이) / 총 연면적 15만평 호텔 (200실), 사무실 및 주거빌딩
+              </h3>
+            </div>
+            <ul class="buildingList floatParents">
+              <li>
+                <p class="height">828m</p>
+                <img src="img/burj_building0.png" alt="부르즈 칼리파" />
+                <a href="#">Burj Khalifa</a>
+              </li>
+              <li>
+                <p class="height">508m</p>
+                <img src="img/burj_building1.png" alt="타이페이 101" />
+                <a href="#">Taipei 101</a>
+              </li>
+              <li>
+                <p class="height">452m</p>
+                <img src="img/burj_building2.png" alt="페트로나스 트윈 타워" />
+                <a href="#">Petronas Towers</a>
+              </li>
+              <li>
+                <p class="height">442m</p>
+                <img src="img/burj_building3.png" alt="시어 타워" />
+                <a href="#">Sears Towers</a>
+              </li>
+              <li>
+                <p class="height">381m</p>
+                <img src="img/burj_building4.png" alt="엠파이어 스테이트 빌딩" />
+                <a href="#">Empire State</a>
+              </li>
+            </ul>
+          </li>
+          <li class="box">
+            <ul class="theme">
+              <li>
+                <div class="themeViewImg"></div>
+                <div class="textBox">
+                  <h3 class="sectionTitle"><span>58</span> ELEVATORS</h3>
+                  <p>
+                    부르즈 칼리파의 전체 엘리베이터 개수는 총 58대 가장 빠른 엘레베이터의 경우 124층 전망대까지 45초
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div class="themeViewImg"></div>
+                <div class="textBox">
+                  <h3 class="sectionTitle">WEIGHT <span>430</span></h3>
+                  <p>600m 상공에 올려진 첨탑 구조물 무게 430t, 길이 233m</p>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <li class="box">
+            <ul class="theme">
+              <li>
+                <div class="themeViewImg"></div>
+                <div class="textBox">
+                  <h3 class="sectionTitle"><span>28,601</span> CURTAIN WALL</h3>
+                  <p>커튼월 28601 여장으로 건물 외관을 이루는 벽을 만들고 바람, 비, 햇볕으로부터 건물 내부를 보호</p>
+                </div>
+              </li>
+              <li>
+                <div class="themeViewImg"></div>
+                <div class="textBox">
+                  <h3 class="sectionTitle"><span>7,000,000</span> PEOPLE</h3>
+                  <p>50개국 7,000,000명이 참여한 대규모 공사 일일 최대 1만 2천명에 달하는 대규모 공사인력</p>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <li class="box">
+            <ul class="theme">
+              <li>
+                <div class="themeViewImg"></div>
+                <div class="textBox">
+                  <h3 class="sectionTitle"><span>코끼리</span></h3>
+                  <p>5t 아프리카 코끼리 10만마리 = 부르즈칼리파 총 하중 540,000t</p>
+                </div>
+              </li>
+              <li>
+                <div class="themeViewImg"></div>
+                <div class="textBox">
+                  <h3 class="sectionTitle"><span>지구 반바퀴</span></h3>
+                  <p>사용된 철근의 총 길이는 25,000km이며(지구반 바퀴를 돌 수 있는 길이) 무게는 총 62,200t</p>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <li class="box">
+            <ul class="theme">
+              <li>
+                <div class="themeViewImg"></div>
+                <div class="textBox">
+                  <h3 class="sectionTitle"><span>TWICE</span></h3>
+                  <p>
+                    삼성동 코엑스 몰(119,009㎡)의 4배<br />여의도 공원(218,183㎡)의 2배<br />잠실운동장(8,265㎡)의 56배
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div class="themeViewImg"></div>
+                <div class="textBox">
+                  <h3 class="sectionTitle"><span>대나무</span></h3>
+                  <p>
+                    대나무의 마디를 형상화 약 30층마다 건물의변형을 방지할 수 있도록 특별히 견고하게 설계된 층을 통해
+                    바람에 의한 변형을 막았다
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <li class="box">
+            <ul class="floatParents">
+              <li>
+                <div class="textBox">
+                  <h3 class="sectionTitle"><span>자동상승</span></h3>
+                  <p>
+                    거푸집 자동 상승 시스템 (콘크리트를 타설 후 콘크리트가 굳으면 자동으로 거푸집이 한층 올라가는
+                    시스템)을 통해 3일에 한 층을 건설하는 신기원을 이룩했다.
+                  </p>
+                </div>
+                <img src="img/themeview_detail0.png" alt="" />
+              </li>
+              <li>
+                <div class="textBox">
+                  <h3 class="sectionTitle"><span>바람</span></h3>
+                  <p>
+                    초속 40미터의 바람을 이기기 위해 사막에 핀 꽃을 형상화 평면이 나선형 패턴으로 면적이 단계적으로 16회
+                    축소하여 바람을 혼란시킨다.
+                  </p>
+                </div>
+                <img src="img/themeview_detail1.png" alt="" />
+              </li>
+              <li>
+                <div class="textBox">
+                  <h3 class="sectionTitle"><span>인공위성</span></h3>
+                  <p>
+                    지상에서 1도만 틀어져도 800m 상공에선 14m 차이가 나기 때문에 도입한 3대의 인공위성을 통한 위성 GPS
+                    측량 시스템
+                  </p>
+                </div>
+                <img src="img/themeview_detail2.png" alt="" />
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="tech box">
+        <div class="titleBox">
+          <h3 class="sectionTitle">초고층 핵심기술력</h3>
+          <h2 class="contentTitle">BURJ KHALIFA</h2>
+        </div>
+        <ul class="floatParents">
+          <li>
+            <img src="img/tech0.jpg" alt="" />
+            <div class="textBox">
+              <h5>CORE WALL</h5>
+              <p>
+                콘크리트 타설 후 형틀을 이동시 자체 장착된 유압잭을 사용하여 상승시키는 시스템으로 최고층까지 지속적으로
+                콘크리트를 타설할 수 있도록 치밀하고 완벽한 사전준비가 요구되는 작업입니다.
+              </p>
+            </div>
+          </li>
+          <li>
+            <img src="img/tech1.jpg" alt="" />
+            <div class="textBox">
+              <h5>초고층 양중관리</h5>
+              <p>
+                초고층 공사시 가장 핵심적인 분야로, 동시 투입되는 대량의 자재와 인원을 타워크레인과 가설엘리베이터를
+                이용하여 적시적소에 이동할 수 있도록 계획, 조정하는 기술입니다. 삼성물산 건설부문은 타워팰리스에
+                적용했던 물류관리시스템을 적용했습니다.
+              </p>
+            </div>
+          </li>
+          <li>
+            <img src="img/tech2.jpg" alt="" />
+            <div class="textBox">
+              <h5>철근 先조립공법</h5>
+              <p>
+                지상에서 기둥, 옹벽의 철근을 먼저 조립하고 타워크레인으로 끌어 올려 한번에 설치하는 공법으로 ‘층당 3일
+                공정’의 핵심 기술입니다.
+              </p>
+            </div>
+          </li>
+          <li>
+            <img src="img/tech3.jpg" alt="" />
+            <div class="textBox">
+              <h5>고강도 콘크리트</h5>
+              <p>
+                세계 최고 강도수준인 800kg/㎤의 콘크리트를 적용했으며, 층당 3일 공정달성을위해 콘크리트의 조기강도 발현,
+                수화열관리, 초고층으로 압송이 가능하도록 하기 위한 콘크리트의 배합설계기술입니다.
+              </p>
+            </div>
+          </li>
+          <li class="select">
+            <img src="img/tech4.jpg" alt="" />
+            <div class="textBox">
+              <h5>하중분산 시스템</h5>
+              <p>지반공사시 직경 1.5m, 깊이 50m 길이의 콘크리트 말뚝이 192본 설치로 하중을 고르게 분산하였습니다.</p>
+            </div>
+          </li>
+          <li>
+            <img src="img/tech5.jpg" alt="" />
+            <div class="textBox">
+              <h5>아웃리거 층</h5>
+              <p>
+                약 30층 마다 건물의 변형을 방지할 수 있도록 특별히 견고하게 설계된 층을 통해 바람에 의한 변형을
+                막았습니다. 바람에 순응하는 대나무의 마디를 형상화했습니다.
+              </p>
+            </div>
+          </li>
+          <li>
+            <img src="img/tech6.jpg" alt="" />
+            <div class="textBox">
+              <h5>GPS 측량시스템</h5>
+              <p>
+                지상에서 1도만 틀어져도 800m 상공에선 14m가 차이가 나기 때문에 도입한 3대의 인공위성을 통한 위성 GPS
+                측량시스템을 도입하여 측량했습니다.
+              </p>
+            </div>
+          </li>
+          <li>
+            <img src="img/tech7.jpg" alt="" />
+            <div class="textBox">
+              <h5>내풍설계</h5>
+              <p>
+                초속 40미터의 바람을 이기기 위하여 ‘사막에 핀 꽃’을 형상화, 평면이 나선형 패턴으로 면적이 단계적으로
+                16회 축소하여 바람을 혼란시킵니다.
+              </p>
+            </div>
+          </li>
+          <li>
+            <img src="img/tech8.jpg" alt="" />
+            <div class="textBox">
+              <h5>내진설계</h5>
+              <p>강도 7.0의 내진설계를 통하여 거주지는 흔들림을 느낄 수 없도록 시공 되었습니다.</p>
+            </div>
+          </li>
+        </ul>
+        <div class="controls">
+          <a href="#" class="prevBtn"></a>
+          <a href="#" class="nextBtn"></a>
+        </div>
+      </div>
+      <div class="news box">
+        <div class="newsBg"></div>
+        <div class="newsBox">
+          <div class="popular">
+            <h3 class="sectionTitle">인기뉴스</h3>
+            <ul class="floatParents">
+              <li>
+                <a href="#">
+                  <h4>[조선일보]</h4>
+                  <h5>나일론·포니·부르즈칼리파… 공학한림원 선정 '대한민국 100대 기술'</h5>
+                  <p>
+                    국내 섬유업계의 혁신을 부른 인조섬유 '나일론' 생산기술 개발, 국내 최초의 고유모델 국산차인 '포니',
+                    두바이에 세워진 세계 최고층 빌딩 '부르즈 칼리파'와 시속 350km급 한국형 고속열차
+                  </p>
+                  <img src="img/burj_news0.jpg" alt="포니" />
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <h4>[동아일보]</h4>
+                  <h5>‘하늘아래 최고’ 한국이 해냈다</h5>
+                  <p>
+                    한국의 삼성물산 건설부문(삼성건설)이 공사를 총괄한 세계 최고(最高)의 인공구조물 ‘부르즈 두바이’가
+                    5년간의 대역사(大役事)를 마무리하고 문을 연다. 아랍에미리트 두바이 정부는 4일 오후 8시(한국 시간 5일
+                    오전 1시) 무함마드 빈 라시드 알막툼 두바이 통치자 취임 4주년 기념일에 맞춰 부르즈 두바이 개장식을 열
+                    예정이라고 3일 밝혔다.
+                  </p>
+                  <img src="img/burj_news1.jpg" alt="신문" />
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <h4>[문화일보]</h4>
+                  <h5>“5년만에 828m 완성하고 현장서 만세 불러”'</h5>
+                  <p>
+                    세계 최고층 인공 건축물인 아랍에미리트연합(UAE) 두바이의 ‘부르즈 두바이(두바이의 탑)’가 5년간의
+                    대역사(大役事)를 거쳐 4일(현지시간) 준공식을 치른다.
+                  </p>
+                  <img src="img/burj_news2.jpg" alt="부르즈 칼리파" />
+                </a>
+              </li>
+              <li class="interview">
+                <a href="#">
+                  <h4>[문화일보]</h4>
+                  <h5>“5년만에 828m 완성하고 현장서 만세 불러”'</h5>
+                  <p>
+                    세계 최고층 인공 건축물인 아랍에미리트연합(UAE) 두바이의 ‘부르즈 두바이(두바이의 탑)’가 5년간의
+                    대역사(大役事)를 거쳐 4일(현지시간) 준공식을 치른다.
+                  </p>
+                  <img src="img/burj_news2.jpg" alt="부르즈 칼리파" />
+                </a>
+                <a href="#" class="overBox">
+                  <div class="textBox">
+                    <h4>인터뷰</h4>
+                    <h6>‘부르즈 칼리파’ 진두지휘 삼성물산 김경준 현장소장</h6>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="newsList">
+            <div class="titleBox">
+              <h3 class="sectionTitle">실시간 뉴스</h3>
             </div>
             <ul class="floatParents">
-                <li>
-                    <img src="img/tech0.jpg" alt="">
-                    <div class="textBox">
-                        <h5>CORE WALL</h5>
-                        <p>콘크리트 타설 후 형틀을 이동시 자체 장착된 유압잭을 사용하여 상승시키는 시스템으로 최고층까지 지속적으로 콘크리트를 타설할 수 있도록 치밀하고 완벽한 사전준비가 요구되는 작업입니다.</p>
-                    </div>
-                </li>
-                <li>
-                    <img src="img/tech1.jpg" alt="">
-                    <div class="textBox">
-                        <h5>초고층 양중관리</h5>
-                        <p>초고층 공사시 가장 핵심적인 분야로, 동시 투입되는 대량의 자재와 인원을 타워크레인과 가설엘리베이터를 이용하여 적시적소에 이동할 수 있도록 계획, 조정하는 기술입니다. 삼성물산 건설부문은 타워팰리스에 적용했던 물류관리시스템을 적용했습니다.</p>
-                    </div>
-                </li>
-                <li>
-                    <img src="img/tech2.jpg" alt="">
-                    <div class="textBox">
-                        <h5>철근 先조립공법</h5>
-                        <p>지상에서 기둥, 옹벽의 철근을 먼저 조립하고 타워크레인으로 끌어 올려 한번에 설치하는 공법으로 ‘층당 3일 공정’의 핵심 기술입니다.</p>
-                    </div>
-                </li>
-                <li>
-                    <img src="img/tech3.jpg" alt="">
-                    <div class="textBox">
-                        <h5>고강도 콘크리트</h5>
-                        <p>세계 최고 강도수준인 800kg/㎤의 콘크리트를 적용했으며, 층당 3일 공정달성을위해 콘크리트의 조기강도 발현, 수화열관리, 초고층으로 압송이 가능하도록 하기 위한 콘크리트의 배합설계기술입니다.</p>
-                    </div>
-                </li>
-                <li class="select">
-                    <img src="img/tech4.jpg" alt="">
-                    <div class="textBox">
-                        <h5>하중분산 시스템</h5>
-                        <p>지반공사시 직경 1.5m, 깊이 50m 길이의 콘크리트 말뚝이 192본 설치로 하중을 고르게 분산하였습니다.</p>
-                    </div>
-                </li>
-                <li>
-                    <img src="img/tech5.jpg" alt="">
-                    <div class="textBox">
-                        <h5>아웃리거 층</h5>
-                        <p>약 30층 마다 건물의 변형을 방지할 수 있도록 특별히 견고하게 설계된 층을 통해 바람에 의한 변형을 막았습니다. 바람에 순응하는 대나무의 마디를 형상화했습니다.</p>
-                    </div>
-                </li>
-                <li>
-                    <img src="img/tech6.jpg" alt="">
-                    <div class="textBox">
-                        <h5>GPS 측량시스템</h5>
-                        <p>지상에서 1도만 틀어져도 800m 상공에선 14m가 차이가 나기 때문에 도입한 3대의 인공위성을 통한 위성 GPS 측량시스템을 도입하여 측량했습니다.</p>
-                    </div>
-                </li>
-                <li>
-                    <img src="img/tech7.jpg" alt="">
-                    <div class="textBox">
-                        <h5>내풍설계</h5>
-                        <p>초속 40미터의 바람을 이기기 위하여 ‘사막에 핀 꽃’을 형상화, 평면이 나선형 패턴으로 면적이 단계적으로 16회 축소하여 바람을 혼란시킵니다.</p>
-                    </div>
-                </li>
-                <li>
-                    <img src="img/tech8.jpg" alt="">
-                    <div class="textBox">
-                        <h5>내진설계</h5>
-                        <p>강도 7.0의 내진설계를 통하여 거주지는 흔들림을 느낄 수 없도록 시공 되었습니다.</p>
-                    </div>
-                </li>
+              <li><a href="#">[조선일보] 나일론·포니·부르즈칼리파… 공학한림원 선정 '대한민국 100대 기술'</a></li>
+              <li><a href="#">[한국경제] 사막지대지만 6m 아래는 암반…50m 말뚝 3192개 박았죠</a></li>
+              <li><a href="#">[서울신문]‘부르즈 칼리파’ 진두지휘 삼성물산 김경준 현장소장</a></li>
+              <li><a href="#">[동아일보]‘하늘아래 최고’ 한국이 해냈다</a></li>
+              <li><a href="#">[KBS] 세계 최고 ‘부르즈 두바이’ 국내 기술 완공</a></li>
+              <li><a href="#">[문화일보] “5년만에 828m 완성하고 현장서 만세 불러”</a></li>
+              <li><a href="#">[중앙일보] 초강풍, 강진에도 버즈두바이는 끄떡없다</a></li>
+              <li><a href="#">[외신] Dubai skyscraper symbol of S. Korea's global heights</a></li>
             </ul>
-            <div class="controls">
-                <a href="#" class="prevBtn"></a>
-                <a href="#" class="nextBtn"></a>
-            </div>
+          </div>
         </div>
-        <div class="news box">
-            <div class="newsBg"></div>
-            <div class="newsBox">
-                <div class="popular">
-                    <h3 class="sectionTitle">인기뉴스</h3>
-                    <ul class="floatParents">
-                        <li><a href="#">
-                            <h4>[조선일보]</h4>
-                            <h5>나일론·포니·부르즈칼리파… 공학한림원 선정 '대한민국 100대 기술'</h5>
-                            <p>국내 섬유업계의 혁신을 부른 인조섬유 '나일론' 생산기술 개발, 국내 최초의 고유모델 국산차인 '포니', 두바이에 세워진 세계 최고층 빌딩 '부르즈 칼리파'와 시속 350km급 한국형 고속열차</p>
-                            <img src="img/burj_news0.jpg" alt="포니">
-                        </a></li>
-                        <li><a href="#">
-                            <h4>[동아일보]</h4>
-                            <h5>‘하늘아래 최고’ 한국이 해냈다</h5>
-                            <p>한국의 삼성물산 건설부문(삼성건설)이 공사를 총괄한 세계 최고(最高)의 인공구조물 ‘부르즈 두바이’가 5년간의 대역사(大役事)를 마무리하고 문을 연다. 아랍에미리트 두바이 정부는 4일 오후 8시(한국 시간 5일 오전 1시) 무함마드 빈 라시드 알막툼 두바이 통치자 취임 4주년 기념일에 맞춰 부르즈 두바이 개장식을 열 예정이라고 3일 밝혔다.</p>
-                            <img src="img/burj_news1.jpg" alt="신문">
-                        </a></li>
-                        <li><a href="#">
-                            <h4>[문화일보]</h4>
-                            <h5>“5년만에 828m 완성하고 현장서 만세 불러”'</h5>
-                            <p>세계 최고층 인공 건축물인 아랍에미리트연합(UAE) 두바이의 ‘부르즈 두바이(두바이의 탑)’가 5년간의 대역사(大役事)를 거쳐 4일(현지시간) 준공식을 치른다.</p>
-                            <img src="img/burj_news2.jpg" alt="부르즈 칼리파">
-                        </a></li>
-                        <li class="interview">
-                            <a href="#">
-                                <h4>[문화일보]</h4>
-                                <h5>“5년만에 828m 완성하고 현장서 만세 불러”'</h5>
-                                <p>세계 최고층 인공 건축물인 아랍에미리트연합(UAE) 두바이의 ‘부르즈 두바이(두바이의 탑)’가 5년간의 대역사(大役事)를 거쳐 4일(현지시간) 준공식을 치른다.</p>
-                                <img src="img/burj_news2.jpg" alt="부르즈 칼리파">
-                            </a>
-                            <a href="#" class="overBox">
-                                <div class="textBox">
-                                    <h4>인터뷰</h4>
-                                    <h6>‘부르즈 칼리파’ 진두지휘 삼성물산 김경준 현장소장</h6>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="newsList">
-                    <div class="titleBox">
-                        <h3 class="sectionTitle">실시간 뉴스</h3>
-                    </div>
-                    <ul class="floatParents">
-                        <li><a href="#">[조선일보] 나일론·포니·부르즈칼리파… 공학한림원 선정 '대한민국 100대 기술'</a></li>
-                        <li><a href="#">[한국경제] 사막지대지만 6m 아래는 암반…50m 말뚝 3192개 박았죠</a></li>
-                        <li><a href="#">[서울신문]‘부르즈 칼리파’ 진두지휘 삼성물산 김경준 현장소장</a></li>
-                        <li><a href="#">[동아일보]‘하늘아래 최고’ 한국이 해냈다</a></li>
-                        <li><a href="#">[KBS] 세계 최고 ‘부르즈 두바이’ 국내 기술 완공</a></li>
-                        <li><a href="#">[문화일보] “5년만에 828m 완성하고 현장서 만세 불러”</a></li>
-                        <li><a href="#">[중앙일보] 초강풍, 강진에도 버즈두바이는 끄떡없다</a></li>
-                        <li><a href="#">[외신] Dubai skyscraper symbol of S. Korea's global heights</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+      </div>
     </section>
 
-    <? include("footer.html")?>
-</body>
+    <footer id="footer">
+      <p class="copy">COPYRIGHT &copy; 배민성 ALL RIGHTS RESERVED.</p>
+      <ul class="fnb floatParents">
+        <li><a href="#">개인정보 처리방침</a></li>
+        <li><a href="#">개인정보 수집 출처 및 처리 목적</a></li>
+        <li><a href="#">윤리경영</a></li>
+        <li><a href="#">고객센터</a></li>
+      </ul>
+      <div class="family">
+        <a href="#">패밀리 사이트 +</a>
+        <ul>
+          <li><a href="https://www.samsungcnt.com" target="blank">삼성물산</a></li>
+          <li><a href="https://www.raemian.co.kr/main.do" target="blank">래미안</a></li>
+          <li><a href="https://blog.naver.com/samsungblueprint" target="blank">건설부문 블로그</a></li>
+          <li><a href="https://www.samsungfashion.com/contents/home.jsp" target="blank">패션부문</a></li>
+          <li><a href="http://rnc.samsungcnt.com/" target="blank">리조트부문</a></li>
+          <li><a href="https://www.secc-partners.co.kr/oamLogin.jsp" target="blank">Partners Potal</a></li>
+          <li><a href="http://www.withsamsung.co.kr/ko/html/main/index.html" target="blank">e-사이버감사팀</a></li>
+        </ul>
+      </div>
+    </footer>
+  </body>
 </html>
