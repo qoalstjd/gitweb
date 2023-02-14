@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>삼성물산 건설_사업소개</title>
+    <link rel="stylesheet" href="css/common.css" type="text/css">
+    <link rel="stylesheet" href="css/sub.css" type="text/css">
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/common.js"></script>
+    <script>
+        $(function(){
+            var scrollHeight = $(window).height() ;
+            var scrollNum=0;
+            var resizeNum=0
+            var documentWidth = $(window).width()
+
+            function move(){
+                $("html,body").stop(true).animate({ scrollTop: scrollHeight*(resizeNum)}, 700);
+            }
+        
+            $('#businessTabs>.tabsList>li').click(function(){
+                $('.box').css('display','block')
+                if(documentWidth>1200){
+                    $('#sideNav').css('display','block')
+                }else{
+                    $('#sideNav').css('display','none')
+                }
+                scrollNum=1;
+                resizeNum=1;
+                move();
+                $('#sideNav ul>li').eq(1).addClass('select').siblings().removeClass('select');
+            })
+
+            // backgroundImage
+            $('.imgList>li>a').click(function(){
+                event.preventDefault()
+                var imgUrl = $(this).attr('data-url')
+                $(this).parents('.business').find('.imgView').css('background-image',imgUrl)
+            })
+        })
+    </script>
+</head>
+<body>
+    <? include("header.html");?>
+
+    <div id="menu">
+        <h1 class="logo"><a href="index.html"><img src="img/logo_white.png" alt="삼성물산"></a></h1>
+        <div class="leftBg"></div>
+        <nav class="gnb">
+            <ul class="floatParents">
+                <li><a href="business.html">사업소개</a></li>
+                <li><a href="about.html">부문소개</a>
+                    <ul class="subMenu">
+                        <li><a href="about.html">Overview</a></li>
+                        <li><a href="about.html">History</a></li>
+                        <li><a href="about.html">Vision</a></li>
+                    </ul>
+                </li>
+                <li><a href="landmark.html">랜드마크</a>
+                    <ul class="subMenu">
+                        <li><a href="landmark.html">부르즈 칼리파</a></li>
+                        <li><a href="landmark.html">인천대교</a></li>
+                        <li><a href="landmark.html">원자력발전</a></li>
+                        <li><a href="landmark.html">래미안</a></li>
+                    </ul>
+                </li>
+                <li><a href="tech.html">기술혁신</a>
+                    <ul class="subMenu">
+                        <li><a href="tech.html">기술팀</a></li>
+                        <li><a href="tech.html">지식재산권</a></li>
+                    </ul>
+                </li>
+                <li><a href="promotion.html">홍보센터</a>
+                    <ul class="subMenu">
+                        <li><a href="promotion.html">보도자료</a></li>
+                        <li><a href="promotion.html">홍보자료</a></li>
+                    </ul>
+                </li>
+                <li><a href="recruit.html">인재채용</a>
+                    <ul class="subMenu">
+                        <li><a href="recruit.html">채용안내</a></li>
+                        <li><a href="recruit.html">직무소개</a></li>
+                        <li><a href="recruit.html">인사제도</a></li>
+                        <li><a href="recruit.html">채용FAQ</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <ul class="util floatParents">
+            <li>
+                <button></button>
+            </li>
+            <li class="lang">
+                <button></button>
+                <div>
+                    <a href="#">한국어</a>
+                    <a href="#">영어</a>
+                </div>
+            </li>
+            <li>
+                <button class="menuBtn">
+                    <div></div>
+                    <div></div>
+                    <span>MENU</span>
+                </button>
+            </li>
+        </ul>
+    </div>
+
+    <aside id="sideNav" class="businessNav">
+        <ul>
+            <li><a href="#">BUSINESS</a></li>
+            <li><a href="#">burj KHALIFA</a></li>
+            <li><a href="#">DESIGN PLAZA</a></li>
+            <li><a href="#">PETRONAS TWINTOWER</a></li>
+        </ul>
+    </aside>
+
+    <section id="businessTabs" class="box">
+        <ul class="tabsList floatParents">
+            <li>
+                <div class="tabsTitle">
+                    <h3 class="sectionTitle">건축사업</h3>
+                    <h2 class="contentTitle">BUILDING</h2>
+                    <p>세계의 도시를 건설하는 무한창조의 꿈</p>
+                </div>
+                <div class="overBox">
+                    <a href="#">포트폴리오 보기 →</a>
+                </div>
+            </li>
+            <li>
+                <div class="tabsTitle">
+                    <h3 class="sectionTitle">토목사업</h3>
+                    <h2 class="contentTitle">BASE</h2>
+                    <p>기술과 역량을 바탕으로 새로운 공간 창조</p>
+                </div>
+                <div class="overBox">
+                    <a href="#">포트폴리오 보기 →</a>
+                </div>
+            </li>
+            <li>
+                <div class="tabsTitle">
+                    <h3 class="sectionTitle">플랜트사업</h3>
+                    <h2 class="contentTitle">PLANT</h2>
+                    <p>Global EPC Contractor 더 큰 세계를 향한 도약</p>
+                </div>
+                <div class="overBox">
+                    <a href="#">포트폴리오 보기 →</a>
+                </div>
+            </li>
+            <li>
+                <div class="tabsTitle">
+                    <h3 class="sectionTitle">주택사업</h3>
+                    <h2 class="contentTitle">HOUSING</h2>
+                    <p>주거문화의 프리미엄 브랜드</p>
+                </div>
+                <div class="overBox">
+                    <a href="#">포트폴리오 보기 →</a>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <section id="businessBurj" class="business box">
+        <div class="imgView"></div>
+        <div class="title">
+            <div class="titleTextBox">
+                <h3 class="sectionTitle">세계 3대 마천루를 시공한</h3>
+                <h2 class="contentTitle">삼성물산 건설부문의 기술력</h2>
+                <p>건축사업 분야에서 공사원가와 건설기간을 단축시키는 첨단 공법 개발과 공간 활용을 극대화 시킬 수 있는 최적의 디자인 설계로 건축 전분야에 걸쳐 다양한 시공경험을 자랑합니다.</p>
+                <p>특히 구조설계, 최적 설비시스템, 고강도 콘크리트, 양중 등 최첨단 핵심기술과 시공기술 노하우가 필요한 초고층 빌딩분야에서 세계 최고층 마천루인 말레이시아 페트로나스 타워, 타이페이 금융센터에 이어 부르즈칼리파까지 세계에서 가장 높은 3개의 마천루를 모두 직접 시공함으로써 초고층 분야 세계 톱 클래스 위상을 높여가고 있습니다.</p>
+            </div>
+        </div>
+        <div class="detail">
+            <div class="detailTextBox">
+                <h3 class="sectionTitle">現 세계 최고층 빌딩, 829.84m</h3>
+                <h2 class="contentTitle">BURJ KHALIFA</h2>
+                <p>
+                    <span>상품</span>초고층<br>
+                    <span>공사기간</span>05.02.01~10.11.01<br>
+                    <span>특이사항</span>163층, 높이 828m<br>
+                    <span>공사내용</span>세계 최고층 빌딩<br>
+                </p>
+            </div>
+        </div>
+        <div class="text">
+            <ul class="imgList floatParents">
+                <li><a href="#" data-url="url(img/burj0.jpg)"><img src="img/burj0.jpg" alt="부르즈칼리파"></a></li>
+                <li><a href="#" data-url="url(img/burj1.jpg)"><img src="img/burj1.jpg" alt="부르즈칼리파"></a></li>
+                <li><a href="#" data-url="url(img/burj2.jpg)"><img src="img/burj2.jpg" alt="부르즈칼리파"></a></li>
+            </ul>
+            <p>삼성물산이 시공한 두바이의 부르즈 칼리파는 높이 828m, 163층의 세계 최고층 빌딩입니다.</p>
+            <p>호텔과 상점, 주거시설이 복합된 건물로 58기의 엘레베이터, 2만 9000개의 커튼월, 철근 4만톤, 고성능 콘크리트 164,000㎥ 가 사용되었으며 3일에 한 층씩 건설하는 시공방식, 인공위성을 이용한 GPS 기술, 복층형 엘리베이터, 진동 저감장치 등 첨단 기술의 집합체라고 할 수 있습니다.</p>
+            <p>삼성물산은 부르즈 칼리파와 타이페이 101, 페트로나스 트윈타워까지 세계 3대 초고층 빌딩 건설에 모두 참여하여 초고층 빌딩 건설시장을 선도해 나가고 있습니다.</p>
+        </div>
+    </section>
+
+    <section id="businessDdp" class="business box">
+        <div class="imgView"></div>
+        <div class="title">
+            <div class="titleTextBox">
+                <h3 class="sectionTitle">첨단 기술력으로 건설해온</h3>
+                <h2 class="contentTitle">다양한 포트폴리오</h2>
+                <p>삼성물산 건설부문은 초고층 분야 뿐만 아니라 공항, 의료시설, 비정형 건축물 및 첨단 생산 시설을 건설하는 엔지니어링 역량을 보유하고 있습니다.</p>
+                <p>동북아시아 최대의 승객 및 화물 허브인 인천국제공항, 중동의 최신 복합 의료 시설인 클리브랜드 클리닉 아부다비, 아시아 최대의 암 진료 센터인 삼성서울병원 암센터, 서울 도심 속 랜드마크이자 미래 지향적 건축물의 아이콘으로 자리 잡은 동대문디자인플라자 등은 삼성물산 건설부문이 최근에 거둔 대표적인 성과물입니다.</p>
+                <p>이처럼 삼성물산 건설부문은 새로운 기술력과 가능성 탐구를 통해 미래를 향한 전진을 계속하고 있습니다.</p>
+            </div>
+        </div>
+        <div class="detail">
+            <div class="detailTextBox">
+                <h3 class="sectionTitle">연면적 85,320㎡<br>세계 최대 비정형 건축물</h3>
+                <h2 class="contentTitle">DDP</h2>
+                <p>
+                    <span>상품</span>일반빌딩<br>
+                    <span>공사기간</span>09.04.01~13.07.01<br>
+                    <span>연면적</span>85,320㎡<br>
+                    <span>특이사항</span>세계 최대 규모의 3차원 외장패널을 적용한 거대 비정형 건축물<br>
+                </p>
+            </div>
+        </div>
+        <div class="text">
+            <ul class="imgList floatParents">
+                <li><a href="#" data-url="url(img/ddp0.jpg)"><img src="img/ddp0.jpg" alt="ddp"></a></li>
+                <li><a href="#" data-url="url(img/ddp1.jpg)"><img src="img/ddp1.jpg" alt="ddp"></a></li>
+                <li><a href="#" data-url="url(img/ddp2.jpg)"><img src="img/ddp2.jpg" alt="ddp"></a></li>
+            </ul>
+            <p>각기 다른 곡률과 형태를 지닌 4만5000장의 알루미늄 외장패널로 구성된 컨벤션·전시시설 디자인정보센터의 시공은 공정에서 BIM 시스템을 적용하였습니다.</p>
+            <p>현존 건축기술로 현실화시키기 어려울 정도의 설계를 하는 것으로 유명한 이라크 출신의 건축설계사 자하 하디드가 설계를 하였고 당사는 최고의 기술력과 공사수행능력, 전문화된 인력을 바탕으로 '불가능'을 '가능'으로 만들었습니다.</p>
+            <p>또한 역사와 공원, 문화가 공존하는 복합공간으로 특히 건물지붕에 색상별 식재패턴을 도입하여 계절에 따라 다양하게 변화하는 옥상녹화의 아름다운 경관을 연출하게 되어 국제적 명소로 거듭날 전망입니다.</p>
+        </div>
+
+    </section>
+
+    <section id="businessPet" class="business box">
+        <div class="imgView"></div>
+        <div class="title">
+            <div class="titleTextBox">
+                <h2 class="contentTitle">DREAM CREATOR</h2>
+                <h3 class="sectionTitle">더 높은 하늘을 향해, 더 넓은 세계를 향해 인류에 대한 더 깊은 열정으로 꿈을 실현합니다.<br>이제 더 큰 미래를 향해 삼성물산 건설부문은 또다시 새로운 세계를 건설할 것입니다.
+                </h3>
+            </div>
+        </div>
+        <div class="detail">
+            <div class="detailTextBox">
+                <h2 class="contentTitle">PETRONAS TWINTOWER</h2>
+                <p>
+                    <span>상품</span>초고층<br>
+                    <span>공사기간</span>93.03.01~97.02.01<br>
+                    <span>공사내용</span>1997당시 세계 최고층 빌딩<br>
+                    <span>특이사항</span>88층, 높이 452m<br>
+                </p>
+            </div>
+        </div>
+        <div class="text">
+            <ul class="imgList floatParents">
+                <li><a href="#" data-url="url(img/pet0.jpg)"><img src="img/pet0.jpg" alt="페트로나스 트윈타워"></a></li>
+                <li><a href="#" data-url="url(img/pet1.jpg)"><img src="img/pet1.jpg" alt="페트로나스 트윈타워"></a></li>
+                <li><a href="#" data-url="url(img/pet2.jpeg)"><img src="img/pet2.jpeg" alt="페트로나스 트윈타워"></a></li>
+            </ul>
+            <p>건설시장에서 회사를 상징할 수 있는 공사를 하고자 했던 삼성물산 건설부문의 꿈은 1993.11 세계 최고층 빌딩인 페트로나스 트윈타워 공사를 수주하며 시작되었습니다.</p>
+            <p>KCC프로젝트는 말레이시아가 2020년에 선진국의 대열에 들어선다는 비전 2020의 핵심사업으로 추진한 프로젝트로 상가, 호텔, 오피스타운을 조성하기 위해 총 17개 동의 초고층을 건설함으로써 수도 콸라룸푸르를 동남아경제의 중심으로 만든다는 야심 찬 사업이었습니다.</p>
+            <p>그 중심에 위치한 페트로나스 트윈타워는 지하 6층 지상 88층으로 높이가 452M로 당시 세계 최고층이었던 미국 시카고 시어즈타워(지상 110층, 높이 443M)를 능가하는 세계 최고의 빌딩이었습니다.</p>
+        </div>
+    </section>
+
+    <? include("footer.html")?>
+</body>
+</html>

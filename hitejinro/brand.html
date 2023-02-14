@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>하이트진로</title>
+    <link rel="stylesheet" href="css/sub.css" type="text/css">
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+    $(function(){
+        function printNextSlider(){
+            $('.printList>li:first').animate({marginLeft:'-250px'},500,function(){
+                $(this).appendTo('.printList').css('margin-left',0)
+            })
+            $('.printList>li').eq(8).animate({width:250,marginTop:0,marginRight:80,marginLeft:40},500).siblings().animate({width:150,marginTop:137,marginRight:40,marginLeft:0},500)
+        }
+        
+        function printPrevSlider(){
+            $('.printList>li:last').prependTo('.printList').css('margin-left','-250px').animate({marginLeft:0},500)
+            $('.printList>li').eq(7).animate({width:250,marginTop:0,marginRight:80,marginLeft:40},500).siblings().animate({width:150,marginTop:137,marginRight:40,marginLeft:0},500)
+        }
+
+        printNextSlider()
+    
+        $('#print .nextBtn').click(function(){   
+            event.preventDefault()
+            printNextSlider()
+        })
+
+        $('#print .prevBtn').click(function(){       
+            event.preventDefault() 
+            printPrevSlider()
+        })
+    })
+    </script>
+</head>
+<body>
+    <header id="header">
+        <div class="headerInner">
+            <a class="headerLogo" href="index.html"><h1><img src="img/logo.png" alt="hitejinro"></h1></a>
+            <a class="headerLogoIcon" href="index.html"><h1><img src="img/logo_icon.png" alt="hitejinro"></h1></a>
+            <a href="#" class="menu"><img src="img/icon_menu.png" alt="메뉴"></a>
+        </div>
+        <nav class="gnb">
+            <a class="quit" href="#"><img src="img/icon_quit.png" alt="메뉴 나가기"></a>
+            <div class="gnbInner">
+                <a class="menuLogo" href="index.html"><h1><img src="img/logo_white.png" alt="hitejinro"></h1></a>
+                <ul class="nb">
+                    <li><a href="about.html">ABOUT</a>
+                        <ul class="subMenu">
+                            <li><a href="about.html">인사말</a></li>
+                            <li><a href="about.html">경영철학</a></li>
+                            <li><a href="about.html">연혁</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="brand.html">BRAND</a>
+                        <ul class="subMenu"></ul>
+                    </li>
+                    <li><a href="social_media.html">SNS &amp; MEDIA</a>
+                        <ul class="subMenu">
+                            <li><a href="social_media.html">Social Board</a></li>
+                            <li><a href="social_media.html">Media</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="recruit.html">RECRUIT</a>
+                        <ul class="subMenu"></ul>
+                    </li>
+                    <li><a href="customer_center.html">CS</a>
+                        <ul class="subMenu">
+                            <li><a href="customer_center.html">FAQ</a></li>
+                            <li><a href="customer_center.html">Q&amp;A</a></li>
+                            <li><a href="customer_center.html">주류 가이드</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="mobileNb">
+                    <li><a href="about.html">ABOUT</a>
+                        <ul class="subMenu">
+                            <li><a href="#">인사말</a></li>
+                            <li><a href="#">경영철학</a></li>
+                            <li><a href="#">연혁</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="social_media.html">SNS&amp;MEDIA</a>
+                        <ul class="subMenu">
+                            <li><a href="#">Social Board</a></li>
+                            <li><a href="#">Media</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="customer_center.html">CS</a>
+                        <ul class="subMenu">
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Q&amp;A</a></li>
+                            <li><a href="#">주류 가이드</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="brand.html">BRAND</a>
+                        <ul class="subMenu"></ul>
+                    </li>
+                    <li><a href="recruit.html">RECRUIT</a>
+                        <ul class="subMenu"></ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <nav id="lnb">
+        <div>
+            <a href="index.html">Home</a>
+            <span>&gt;</span>
+            <a href="brand.html">BRAND</a>
+            <span>&gt;</span>
+            <a href="brand.html">BEER</a>
+        </div>
+    </nav>
+    <aside id="asideNb">
+        <nav>
+            <ul class="drink">
+                <li><a href="#"></a>
+                    <ul class="subDrink">
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                    </ul>
+                </li>
+                <li><a href="#"></a>
+                    <ul class="subDrink">
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                    </ul></li>
+
+                <li><a href="#"></a>
+                    <ul class="subDrink">
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                    </ul></li>
+
+                <li><a href="#"></a>
+                    <ul class="subDrink">
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                    </ul></li>
+
+                <li><a href="#"></a>
+                    <ul class="subDrink">
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                    </ul>
+                </li>
+                <li><a href="#"></a>
+                    <ul class="subDrink">
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                    </ul>
+                </li>
+                <li><a href="#"></a>
+                    <ul class="subDrink">
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                    </ul></li>
+
+            </ul>
+        </nav>
+        <a href="#" class="lnbBtn">&gt;</a>
+    </aside>
+    <section id="brandTopBanner"></section>
+    <nav id="brandNb">
+        <ul>
+            <li class="select"><a href="#about">ABOUT</a></li>
+            <li><a href="#limitedEdition">LIMITED EDITION</a></li>
+            <li><a href="#tvcf">TVCF</a></li>
+            <li><a href="#print">PRINT</a></li>
+        </li>
+    </nav>
+    <section id="about">
+        <div class="titleBox">
+            <h2 class="brandTitle">ABOUT</h2>
+            <div class="underLine"></div>
+        </div>
+        <div class="aboutWrap">
+            <div class="textBox">
+                <h3>TERRA</h3>
+                <h5>2019년 3월, 청정라거 시대가 열립니다!</h5>
+                <h4>시대의 돌풍을 일으킬 청정라거, TERRA</h4>
+                <table>
+                    <tbody>
+                        <caption>PRODUCT INFORMATION</caption>
+                        <tr>
+                            <th>용량</th>
+                            <td>병 330ml, 500ml / 캔 255ml, 355ml, 500ml / 페트 1000ml, 1600ml</td>
+                        </tr>
+                        <tr>
+                            <th>도수</th>
+                            <td>4.5%</td>
+                        </tr>
+                        <tr>
+                            <th>특징</th>
+                            <td>숙성에서부터 여과까지 생산 전 공정을 맥주가 얼기 직전,<br>
+                                영하의 온도에서 제조하여 시원하고 청량한 페일라거 맥주 본연의 맛을 극대화</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+    <section id="limitedEdition">
+        <div class="titleBox">
+            <h2 class="brandTitle">LIMITED EDITION</h2>
+            <div class="underLine"></div>
+        </div>
+        <div class="rightText">
+            <h3>테라 출시 2주년 감사<br>
+                다시 활짝 웃는 청정한 대한민국을 위해!<br>
+                테라 X 스마일리 한정판 출시 </h3>
+            <p class="explain">
+                초미세먼지 시대,<br>
+                휘몰아치는 청정함으로 대한민국을 씻어 내린 테라가<br>
+                2021년 4월, [테라 X 스마일리] 한정판을 출시합니다.<br><br>
+                
+                마스크 속에 일상의 웃음이 가려진 요즘,<br>
+                [테라 X 스마일리]가 전하는 청정 미소와 함께 웃을 일이 많아지는<br>
+                대한민국을 꿈꿔봅니다
+            </p>
+            <p class="detail">
+                제품명 : [테라 X 스마일리] 한정판<br>
+                용량/용기 : 355 mL 캔, 500 mL 캔/병<br>
+                테라의 첫번째 한정판으로, 글로벌 탑 브랜드들과의 협업으로 끊임없이<br>
+                화제를 일으키고 있는 영국 “스마일리[ 스마일이미지 ]”와의 컬래버레이션 제품
+            </p>
+        </div>
+    </section>
+    <section id="tvcf">
+        <div class="titleBox">
+            <h2 class="brandTitle">TVCF</h2>
+            <div class="underLine"></div>
+        </div>
+        <div class="cfWrap">
+            <div class="youtube">
+                <iframe src="https://www.youtube.com/embed/1p4hJB1c_9o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="rightText">
+                    <h5>타이틀 : 캡틴껍편</h5>
+                    <p>깔끔함을 초월한<br>
+                    초깔끔한 맛<br>
+                    소주의 원조, 진로</p>
+                </div>
+            </div>
+            <ul class="cfList">
+                <li><a href="#"><img src="img/brand/terra_cf0.jpg" alt=""></a></li>
+                <li><a href="#"><img src="img/brand/terra_cf1.jpg" alt=""></a></li>
+                <li><a href="#"><img src="img/brand/terra_cf2.jpg" alt=""></a></li>
+                <li><a href="#"><img src="img/brand/terra_cf3.png" alt=""></a></li>
+                <li><a href="#"><img src="img/brand/terra_cf4.jpg" alt=""></a></li>
+                <li><a href="#"><img src="img/brand/terra_cf5.jpg" alt=""></a></li>
+                <li><a href="#"><img src="img/brand/terra_cf6.jpg" alt=""></a></li>
+                <li><a href="#"><img src="img/brand/terra_cf7.jpg" alt=""></a></li>
+            </ul>
+        </div>
+        <a href="#" class="prevBtn">←</a>
+        <a href="#" class="nextBtn">→</a>
+    </section>
+    <section id="print">
+        <div class="titleBox">
+            <h2 class="brandTitle">PRINT</h2>
+            <div class="underLine"></div>
+        </div>
+        <div class="printWrap">
+            <ul class="printList">
+                <li><img src="img/brand/terra_print0.png" alt=""></li>
+                <li><img src="img/brand/terra_print1.jpg" alt=""></li>
+                <li><img src="img/brand/terra_print2.jpg" alt=""></li>
+                <li><img src="img/brand/terra_print3.jpg" alt=""></li>
+                <li><img src="img/brand/terra_print4.jpg" alt=""></li>
+                <li><img src="img/brand/terra_print5.jpg" alt=""></li>
+                <li><img src="img/brand/terra_print6.png" alt=""></li>
+                <li><img src="img/brand/terra_print7.jpg" alt=""></li>
+                <li><img src="img/brand/terra_print8.jpg" alt=""></li>
+                <li><img src="img/brand/terra_print9.jpg" alt=""></li>
+                <li><img src="img/brand/terra_print10.jpg" alt=""></li>
+                <li><img src="img/brand/terra_print11.jpg" alt=""></li>
+                <li><img src="img/brand/terra_print12.jpg" alt=""></li>
+                <li><img src="img/brand/terra_print13.jpg" alt=""></li>
+                <li><img src="img/brand/terra_print14.jpg" alt=""></li>
+                <li><img src="img/brand/terra_print15.jpg" alt=""></li>
+            </ul>
+        </div>
+        <a href="#" class="prevBtn">←</a>
+        <a href="#" class="nextBtn">→</a>
+    </section>
+    <footer id="footer">
+        <h1 class="footerLogo"><a href="index.html"><img src="img/logo_white.png" alt=""></a></h1>
+        <ul class="fnb">
+            <li><a href="#">개인정보처리방침</a></li>
+            <li><a href="#">회원이용약관</a></li>
+            <li><a href="#">이메일</a></li>
+            <li><a href="#">무단수집거부</a></li>
+            <li><a href="#">동반성장청음고</a></li>
+            <li><a href="#">공시정보</a></li>
+            <li><a href="#">관리규정</a></li>
+            <li><a href="#">공정거래자율준수</a></li>
+        </ul>
+        <p>(06075) 서울특별시 강남구 영동대로 714 하이트진로빌딩 | 대표전화 080-210-0150 | 사업자등록번호 214-81-00777
+            <br>Copyright© 배민성 ALL RIGHTS RESERVED.</p>
+    </footer>
+</body>
+</html>
