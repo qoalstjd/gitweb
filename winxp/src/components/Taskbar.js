@@ -1,4 +1,4 @@
-function Taskbar() {
+function Taskbar({ taskList }) {
   let date = new Date();
   let hour = date.getHours();
   let minute = date.getMinutes();
@@ -24,7 +24,11 @@ function Taskbar() {
   return (
     <section className="taskbar">
       <button>시작</button>
-      <ul></ul>
+      <ul>
+        {taskList.map((li, i) => (
+          <li key={i}>{li}</li>
+        ))}
+      </ul>
       <div>
         {hourOrganize()}:{minuteOrganize()}
       </div>

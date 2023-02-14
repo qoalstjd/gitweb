@@ -22,6 +22,10 @@ main {
 }
 // ====================== e main ======================
 
+.context {
+  position: absolute;
+}
+
 // ====================== s wallpaper ======================
 .wallpaper {
   position: relative;
@@ -56,7 +60,7 @@ main {
         }
         &:focus {
           outline: none;
-          background: #fff;
+          background: blue;
         }
         &.dir::before {
           @include spliteIco(48px, 0, 0);
@@ -80,6 +84,7 @@ main {
 
           &.on {
             overflow: visible;
+            z-index: 1;
           }
         }
       }
@@ -108,6 +113,9 @@ main {
   ul {
     width: 100%;
     flex: 1;
+    height: 100%;
+    @include flex(row, flex-start, center);
+    flex-wrap: wrap;
   }
   div {
     padding: 0 15px;
@@ -120,7 +128,7 @@ main {
 }
 
 .layer {
-  @include absolute(50%, none, none, 50%, 100px, 100px);
+  @include absolute(50%, initial, initial, 50%, 100px, 100px);
   transform: translate(-50%, -50%);
   display: none;
 }
@@ -128,8 +136,23 @@ main {
 
 // ====================== s directory ======================
 .directory {
-  @include absolute(50%, none, none, 50%, 800px, 500px);
+  @include absolute(50%, initial, initial, 50%, 800px, 500px);
   transform: translate(-50%, -50%);
+
+  & + .directory {
+    left: calc(50% + 32px);
+    top: calc(50% + 32px);
+
+    & + .directory {
+      left: calc(50% + 64px);
+      top: calc(50% + 64px);
+
+      & + .directory {
+        left: calc(50% + 96px);
+        top: calc(50% + 96px);
+      }
+    }
+  }
 
   @media screen and (max-width: 800px) {
     width: 100%;
@@ -140,7 +163,7 @@ main {
   border-radius: 8px 8px 0 0;
 
   &.max {
-    @include absolute(0, none, none, 0, 100%, 100%);
+    @include absolute(0, initial, initial, 0, 100%, 100%);
     transform: none;
     .title div button:nth-child(2) {
       background-position: -48px 0;
@@ -160,7 +183,7 @@ main {
       &::before {
         content: "";
         display: block;
-        @include absolute(8px, none, none, 6px, 16px, 16px);
+        @include absolute(8px, initial, initial, 6px, 16px, 16px);
         @include spliteIco(16px, 0, 0);
       }
     }
@@ -351,7 +374,7 @@ main {
   }
 
   .windowBar {
-    @include absolute(none, none, 0, 0, 100%, 29px);
+    @include absolute(initial, initial, 0, 0, 100%, 29px);
     background-image: url(../img/window_bar.png);
   }
 }

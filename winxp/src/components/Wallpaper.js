@@ -1,25 +1,22 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useEffect } from "react";
 
-function Wallpaper() {
+function Wallpaper({ taskList, setTaskList, DB }) {
   // 한번클릭시 focus
-  const [oneClick, setOneClick] = useState(false);
+  // const [oneClick, setOneClick] = useState(false);
   const focusThis = event => {
-    setOneClick(true);
+    // setOneClick(true);
     event.target.focus();
   };
+
   // 두번클릭시 open
-  const [doubleClick, setDoubleClick] = useState(false);
+  // const [doubleClick, setDoubleClick] = useState(false);
   const openDir = event => {
-    console.log(event.target.innerText);
+    if (!taskList.includes(event.target.innerText)) {
+      setTaskList([...taskList, event.target.innerText]);
+    }
   };
 
-  const icoList = [
-    { title: "JavaScript", type: "dir" },
-    { title: "React", type: "dir" },
-    { title: "Read", type: "txt" },
-  ];
-
-  const wallpaper = useRef();
+  // 우클릭 이벤트
   const [contextOpen, setContextOpen] = useState({ state: false, pageY: 0, pageX: 0 });
   useEffect(() => {
     const onContextMenu = event => {
@@ -34,14 +31,19 @@ function Wallpaper() {
   }, []);
 
   return (
-    <section className="wallpaper" ref={wallpaper}>
+    <section className="wallpaper">
+      {contextOpen.state && (
+        <div className="context" style={{ top: `${contextOpen.pageY}px`, left: `${contextOpen.pageX}px` }}>
+          메뉴
+        </div>
+      )}
       <ul>
-        {icoList.map((data, i) => (
+        {DB.map((data, i) => (
           <li key={i}>
             <button onClick={focusThis} onDoubleClick={openDir} className={data.type}>
               <span>
                 {data.title}
-                {data.type != "dir" ? "." + data.type : ""}
+                {data.type !== "dir" ? "." + data.type : ""}
               </span>
             </button>
           </li>

@@ -1,6 +1,6 @@
 import { useState, useRef } from "react";
 
-function Directory() {
+function Directory({ taskList, setTaskList, db }) {
   const directory = useRef();
 
   // dir control
@@ -13,24 +13,19 @@ function Directory() {
   };
 
   const closeDir = () => {
-    directory.current.remove();
+    setTaskList(taskList.filter(task => task !== db.title));
   };
 
   // dir route
-  const [dirRoute, setdirRoute] = useState("");
+  const [dirRoute, setDirRoute] = useState("");
   const route = event => {
-    setdirRoute(event.target.value);
+    setDirRoute(event.target.value);
   };
 
-  const fileList = [
-    { name: "1. 기본 개념과 동작 원리 이해의 중요성", size: "22KB", type: "txt", createdDate: "2022-05-10" },
-    { name: "2. 자바스크립트란?", size: "53KB", type: "txt", createdDate: "2022-05-12" },
-    { name: "3. 자바스크립트 개발 환경과 실행 방법", size: "32KB", type: "txt", createdDate: "2022-05-17" },
-  ];
   return (
     <section className="directory" ref={directory}>
       <div className="title">
-        <p>JavaScript</p>
+        <p>{db.title}</p>
         <div>
           <button onClick={minimization}>
             <span className="hidden">최소화</span>
@@ -84,7 +79,7 @@ function Directory() {
               </tr>
             </thead>
             <tbody>
-              {fileList.map((data, i) => (
+              {db.fileList.map((data, i) => (
                 <tr key={i} className={data.type}>
                   <td>
                     <button>
