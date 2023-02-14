@@ -61,7 +61,7 @@
 <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=qoalstjd&layout=compact">
 <img src="https://github-readme-stats.vercel.app/api?username=qoalstjd&show_icons=true">
 
-![Taehyun's GitHub Contributor stats](https://github-contributor-stats.vercel.app/api?username=qoalstjd)
+![qoalstjd's GitHub Contributor stats](https://github-contributor-stats.vercel.app/api?username=qoalstjd)
 
 <br>
 <p>🏆 Baekjoon solved rank 🏆</p>
