@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/windowsXP/static/css/main.26fae83b.css",
-    "main.js": "/windowsXP/static/js/main.c207ab11.js",
-    "static/media/wallpaper.jpg": "/windowsXP/static/media/wallpaper.5c90eeb95cd548d72ac6.jpg",
-    "static/media/boot.png": "/windowsXP/static/media/boot.9ad2e4ef29f9f4c65c75.png",
-    "static/media/btn_start.png": "/windowsXP/static/media/btn_start.5b38c5e40763df30adcf.png",
-    "static/media/splite.png": "/windowsXP/static/media/splite.9ebe51b28d6a38abe749.png",
-    "index.html": "/windowsXP/index.html",
-    "main.26fae83b.css.map": "/windowsXP/static/css/main.26fae83b.css.map",
-    "main.c207ab11.js.map": "/windowsXP/static/js/main.c207ab11.js.map"
+    "main.css": "./static/css/main.0101a09b.css",
+    "main.js": "./static/js/main.e1ec212e.js",
+    "static/media/wallpaper.jpg": "./static/media/wallpaper.5c90eeb95cd548d72ac6.jpg",
+    "static/media/boot.png": "./static/media/boot.9ad2e4ef29f9f4c65c75.png",
+    "static/media/btn_start.png": "./static/media/btn_start.5b38c5e40763df30adcf.png",
+    "static/media/splite.png": "./static/media/splite.9ebe51b28d6a38abe749.png",
+    "index.html": "./index.html",
+    "main.0101a09b.css.map": "./static/css/main.0101a09b.css.map",
+    "main.e1ec212e.js.map": "./static/js/main.e1ec212e.js.map"
   },
   "entrypoints": [
-    "static/css/main.26fae83b.css",
-    "static/js/main.c207ab11.js"
+    "static/css/main.0101a09b.css",
+    "static/js/main.e1ec212e.js"
   ]
 }
