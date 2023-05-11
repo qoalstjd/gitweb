@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "./static/css/main.e8314930.css",
+    "main.js": "./static/js/main.223cb94d.js",
+    "static/media/ChosunSm.TTF": "./static/media/ChosunSm.03c1a6b41c84ca625625.TTF",
+    "static/media/ChosunKm.TTF": "./static/media/ChosunKm.a83ce54f9048bfd856c9.TTF",
+    "static/media/ChosunLo.TTF": "./static/media/ChosunLo.77ecc025be0173b3d824.TTF",
+    "static/media/ChosunKg.TTF": "./static/media/ChosunKg.5922e50828ed29451f92.TTF",
+    "static/media/ChosunSg.TTF": "./static/media/ChosunSg.382aa014624a78828d1e.TTF",
+    "static/media/paper.png": "./static/media/paper.a532964c9210ba08c020.png",
+    "static/media/v0.jpeg": "./static/media/v0.55d2d966e3ca5b6da84e.jpeg",
+    "static/media/main_slide1.jpeg": "./static/media/main_slide1.3b31cc2f7e99ccd373d2.jpeg",
+    "static/media/main_slide0.jpeg": "./static/media/main_slide0.fbef2e5504f3bbe709f0.jpeg",
+    "static/media/overview.jpeg": "./static/media/overview.44fda06c1ecbe3706615.jpeg",
+    "static/media/main_slide2.jpeg": "./static/media/main_slide2.d5db5f3566c950b8c0ed.jpeg",
+    "static/media/main_slide3.jpeg": "./static/media/main_slide3.3f2ac1f4d1b922794fc6.jpeg",
+    "static/media/pattern2.png": "./static/media/pattern2.84c0fff742449e1b4b73.png",
+    "index.html": "./index.html",
+    "main.e8314930.css.map": "./static/css/main.e8314930.css.map",
+    "main.223cb94d.js.map": "./static/js/main.223cb94d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e8314930.css",
+    "static/js/main.223cb94d.js"
+  ]
+}
