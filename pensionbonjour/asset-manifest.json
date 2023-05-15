@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "./static/css/main.bfc38644.css",
-    "main.js": "./static/js/main.fb54ec78.js",
-    "static/media/ChosunSm.TTF": "./static/media/ChosunSm.03c1a6b41c84ca625625.TTF",
-    "static/media/ChosunKm.TTF": "./static/media/ChosunKm.a83ce54f9048bfd856c9.TTF",
-    "static/media/ChosunLo.TTF": "./static/media/ChosunLo.77ecc025be0173b3d824.TTF",
-    "static/media/ChosunKg.TTF": "./static/media/ChosunKg.5922e50828ed29451f92.TTF",
-    "static/media/ChosunSg.TTF": "./static/media/ChosunSg.382aa014624a78828d1e.TTF",
-    "static/media/paper.png": "./static/media/paper.a532964c9210ba08c020.png",
-    "index.html": "./index.html",
-    "main.bfc38644.css.map": "./static/css/main.bfc38644.css.map",
-    "main.fb54ec78.js.map": "./static/js/main.fb54ec78.js.map"
+    "main.css": "/pensionbonjour/static/css/main.c778fb57.css",
+    "main.js": "/pensionbonjour/static/js/main.fb54ec78.js",
+    "static/media/ChosunSm.TTF": "/pensionbonjour/static/media/ChosunSm.03c1a6b41c84ca625625.TTF",
+    "static/media/ChosunKm.TTF": "/pensionbonjour/static/media/ChosunKm.a83ce54f9048bfd856c9.TTF",
+    "static/media/ChosunLo.TTF": "/pensionbonjour/static/media/ChosunLo.77ecc025be0173b3d824.TTF",
+    "static/media/ChosunKg.TTF": "/pensionbonjour/static/media/ChosunKg.5922e50828ed29451f92.TTF",
+    "static/media/ChosunSg.TTF": "/pensionbonjour/static/media/ChosunSg.382aa014624a78828d1e.TTF",
+    "static/media/paper.png": "/pensionbonjour/static/media/paper.a532964c9210ba08c020.png",
+    "index.html": "/pensionbonjour/index.html",
+    "main.c778fb57.css.map": "/pensionbonjour/static/css/main.c778fb57.css.map",
+    "main.fb54ec78.js.map": "/pensionbonjour/static/js/main.fb54ec78.js.map"
   },
   "entrypoints": [
-    "static/css/main.bfc38644.css",
+    "static/css/main.c778fb57.css",
     "static/js/main.fb54ec78.js"
   ]
 }
