@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/pensionbonjour/static/css/main.0d7fa412.css",
-    "main.js": "/pensionbonjour/static/js/main.d848bc56.js",
+    "main.css": "/pensionbonjour/static/css/main.aed8e3b3.css",
+    "main.js": "/pensionbonjour/static/js/main.9abb5725.js",
     "static/media/ChosunSm.TTF": "/pensionbonjour/static/media/ChosunSm.03c1a6b41c84ca625625.TTF",
     "static/media/ChosunKm.TTF": "/pensionbonjour/static/media/ChosunKm.a83ce54f9048bfd856c9.TTF",
     "static/media/ChosunLo.TTF": "/pensionbonjour/static/media/ChosunLo.77ecc025be0173b3d824.TTF",
@@ -10,11 +10,11 @@
     "static/media/paper.png": "/pensionbonjour/static/media/paper.a532964c9210ba08c020.png",
     "static/media/pattern-border.png": "/pensionbonjour/static/media/pattern-border.71711e5a51f371fefcf9.png",
     "index.html": "/pensionbonjour/index.html",
-    "main.0d7fa412.css.map": "/pensionbonjour/static/css/main.0d7fa412.css.map",
-    "main.d848bc56.js.map": "/pensionbonjour/static/js/main.d848bc56.js.map"
+    "main.aed8e3b3.css.map": "/pensionbonjour/static/css/main.aed8e3b3.css.map",
+    "main.9abb5725.js.map": "/pensionbonjour/static/js/main.9abb5725.js.map"
   },
   "entrypoints": [
-    "static/css/main.0d7fa412.css",
-    "static/js/main.d848bc56.js"
+    "static/css/main.aed8e3b3.css",
+    "static/js/main.9abb5725.js"
   ]
 }
