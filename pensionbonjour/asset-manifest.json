@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/pensionbonjour/static/css/main.caca656f.css",
-    "main.js": "/pensionbonjour/static/js/main.588233b1.js",
+    "main.js": "/pensionbonjour/static/js/main.05ca973a.js",
     "static/media/ChosunSm.TTF": "/pensionbonjour/static/media/ChosunSm.03c1a6b41c84ca625625.TTF",
     "static/media/ChosunKm.TTF": "/pensionbonjour/static/media/ChosunKm.a83ce54f9048bfd856c9.TTF",
     "static/media/ChosunLo.TTF": "/pensionbonjour/static/media/ChosunLo.77ecc025be0173b3d824.TTF",
@@ -13,10 +13,10 @@
     "static/media/overview_mobile.jpg": "/pensionbonjour/static/media/overview_mobile.efd1a8d648da08a8543b.jpg",
     "index.html": "/pensionbonjour/index.html",
     "main.caca656f.css.map": "/pensionbonjour/static/css/main.caca656f.css.map",
-    "main.588233b1.js.map": "/pensionbonjour/static/js/main.588233b1.js.map"
+    "main.05ca973a.js.map": "/pensionbonjour/static/js/main.05ca973a.js.map"
   },
   "entrypoints": [
     "static/css/main.caca656f.css",
-    "static/js/main.588233b1.js"
+    "static/js/main.05ca973a.js"
   ]
 }
