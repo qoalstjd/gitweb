@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>three.js</title>
-  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="css/common.css">
   <script type="importmap">
     {
       "imports": {
@@ -22,14 +22,14 @@
   <script>
     const buttonsDiv = document.getElementById("buttons");
     const webglWrap = document.getElementById("webgl-wrap");
-    const scriptFiles = ["11_solarSystem.js",]; //"20_hdr.js" hdr은 너무무거워 빼놓음
+    const scriptFiles = ["01_basic.js", "02_material.js", "03_texture.js", "04_camera.js", "05_light.js", "06_shadow.js", "07_orbitControl.js", "08_fog.js", "09_skybox.js"];
     const canvasIndex = 1;
 
     function loadScript(scriptFileName) {
       return new Promise((resolve, reject) => {
         const newScript = document.createElement("script");
         newScript.type = "module";
-        newScript.src = '../js/' + scriptFileName;
+        newScript.src = './js/' + scriptFileName;
         newScript.onload = function () {
           resolve();
           webglWrap.querySelector(`canvas:nth-child(${canvasIndex})`).classList.add("active");
