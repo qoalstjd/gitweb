@@ -34,12 +34,12 @@ scene.add(ambientLight);
 
 // 배경
 const skyMaterialArray = [];
-const texture_ft = new THREE.TextureLoader().load("/img/dusk_ft.jpg");
-const texture_bk = new THREE.TextureLoader().load("/img/dusk_bk.jpg");
-const texture_up = new THREE.TextureLoader().load("/img/dusk_up.jpg");
-const texture_dn = new THREE.TextureLoader().load("/img/dusk_dn.jpg");
-const texture_rt = new THREE.TextureLoader().load("/img/dusk_rt.jpg");
-const texture_lf = new THREE.TextureLoader().load("/img/dusk_lf.jpg");
+const texture_ft = new THREE.TextureLoader().load("img/dusk_ft.jpg");
+const texture_bk = new THREE.TextureLoader().load("img/dusk_bk.jpg");
+const texture_up = new THREE.TextureLoader().load("img/dusk_up.jpg");
+const texture_dn = new THREE.TextureLoader().load("img/dusk_dn.jpg");
+const texture_rt = new THREE.TextureLoader().load("img/dusk_rt.jpg");
+const texture_lf = new THREE.TextureLoader().load("img/dusk_lf.jpg");
 skyMaterialArray.push(
   new THREE.MeshStandardMaterial({
     map: texture_ft,
