@@ -1,19 +1,19 @@
 import * as THREE from "three";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 
-const starsTexture = "img/solar_system/stars.jpg";
-const sunTexture = "img/solar_system/sun.jpg";
-const mercuryTexture = "img/solar_system/mercury.jpg";
-const venusTexture = "img/solar_system/venus.jpg";
-const earthTexture = "img/solar_system/earth.jpg";
-const marsTexture = "img/solar_system/mars.jpg";
-const jupiterTexture = "img/solar_system/jupiter.jpg";
-const saturnTexture = "img/solar_system/saturn.jpg";
-const saturnRingTexture = "img/solar_system/saturn ring.png";
-const uranusTexture = "img/solar_system/uranus.jpg";
-const uranusRingTexture = "img/solar_system/uranus ring.png";
-const neptuneTexture = "img/solar_system/neptune.jpg";
-const plutoTexture = "img/solar_system/pluto.jpg";
+const starsTexture = "../img/solar_system/stars.jpg";
+const sunTexture = "../img/solar_system/sun.jpg";
+const mercuryTexture = "../img/solar_system/mercury.jpg";
+const venusTexture = "../img/solar_system/venus.jpg";
+const earthTexture = "../img/solar_system/earth.jpg";
+const marsTexture = "../img/solar_system/mars.jpg";
+const jupiterTexture = "../img/solar_system/jupiter.jpg";
+const saturnTexture = "../img/solar_system/saturn.jpg";
+const saturnRingTexture = "../img/solar_system/saturn ring.png";
+const uranusTexture = "../img/solar_system/uranus.jpg";
+const uranusRingTexture = "../img/solar_system/uranus ring.png";
+const neptuneTexture = "../img/solar_system/neptune.jpg";
+const plutoTexture = "../img/solar_system/pluto.jpg";
 
 /* 렌더러 */
 const renderer = new THREE.WebGL1Renderer({ antialias: true });

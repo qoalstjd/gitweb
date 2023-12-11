@@ -3,7 +3,7 @@ import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 import { RGBELoader } from "three/addons/loaders/RGBELoader.js";
 
 const hdrTextureURL = new URL(
-  "img/MR_INT-003_Kitchen_Pierre.hdr",
+  "three_js/img/MR_INT-003_Kitchen_Pierre.hdr",
   import.meta.url
 );
 

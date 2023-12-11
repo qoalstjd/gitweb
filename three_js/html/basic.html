@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>three.js</title>
-  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="../css/common.css">
   <script type="importmap">
     {
       "imports": {
@@ -29,7 +29,7 @@
       return new Promise((resolve, reject) => {
         const newScript = document.createElement("script");
         newScript.type = "module";
-        newScript.src = './js/' + scriptFileName;
+        newScript.src = '../js/' + scriptFileName;
         newScript.onload = function () {
           resolve();
           webglWrap.querySelector(`canvas:nth-child(${canvasIndex})`).classList.add("active");
