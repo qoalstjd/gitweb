@@ -14,7 +14,7 @@ const camera = new THREE.PerspectiveCamera(
 camera.position.z = 3;
 
 // 렌더러
-const renderer = new THREE.WebGL1Renderer({ alpha: true, antialias: true });
+const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
 renderer.setSize(window.innerWidth, window.innerHeight);
 
 document.getElementById("webgl-wrap").appendChild(renderer.domElement);
@@ -26,10 +26,18 @@ scene.add(pointLight);
 
 // 텍스처 추가
 const textureLoader = new THREE.TextureLoader();
-const textureBaseColor = textureLoader.load("img/Stone_Path_008_basecolor.jpg");
-const textureNormalMap = textureLoader.load("img/Stone_Path_008_normal.jpg");
-const textureHeightMap = textureLoader.load("img/Stone_Path_008_height.png");
-const textureRoughness = textureLoader.load("img/Stone_Path_008_roughness.jpg");
+const textureBaseColor = textureLoader.load(
+  "img/basic/Stone_Path_008_basecolor.jpg"
+);
+const textureNormalMap = textureLoader.load(
+  "img/basic/Stone_Path_008_normal.jpg"
+);
+const textureHeightMap = textureLoader.load(
+  "img/basic/Stone_Path_008_height.png"
+);
+const textureRoughness = textureLoader.load(
+  "img/basic/Stone_Path_008_roughness.jpg"
+);
 
 // 도형 추가
 const geometry = new THREE.SphereGeometry(0.3, 32, 16);

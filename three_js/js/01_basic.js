@@ -14,7 +14,7 @@ const camera = new THREE.PerspectiveCamera(
 camera.position.z = 3;
 
 // 렌더러
-const renderer = new THREE.WebGL1Renderer({ alpha: true, antialias: true });
+const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
 renderer.setSize(window.innerWidth, window.innerHeight);
 
 document.getElementById("webgl-wrap").appendChild(renderer.domElement);

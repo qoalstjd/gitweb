@@ -1,5 +1,6 @@
 import * as THREE from "three";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
+import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 
 /* 렌더러 */
 const renderer = new THREE.WebGLRenderer({ antialias: true });
@@ -7,7 +8,7 @@ renderer.setSize(window.innerWidth, window.innerHeight);
 document.getElementById("webgl-wrap").appendChild(renderer.domElement);
 
 /* 배경색 */
-renderer.setClearColor(0xfefefe);
+renderer.setClearColor(0xa3a3a3);
 
 /* 장면 */
 const scene = new THREE.Scene();
@@ -22,28 +23,44 @@ const camera = new THREE.PerspectiveCamera(
 const orbit = new OrbitControls(camera, renderer.domElement);
 
 /* 카메라 위치 */
-camera.position.set(6, 8, 14);
+camera.position.set(10, 10, 10);
 orbit.update();
 
 /* 그리드Helper */
-const gridHelper = new THREE.GridHelper(12, 12);
+const gridHelper = new THREE.GridHelper(30, 30);
 scene.add(gridHelper);
 
-/* 각Helper */
-const axesHelper = new THREE.AxesHelper(4);
-scene.add(axesHelper);
-
-/* 빛 */
-const directionalLight = new THREE.DirectionalLight(0xffffff, 0.8);
-scene.add(directionalLight);
-directionalLight.position.set(0, 50, 0);
-
 /* 오브젝트 */
+const monkeyUrl = new URL("../img/doggo2.glb", import.meta.url);
+const assetLoader = new GLTFLoader();
+let mixer;
+assetLoader.load(
+  monkeyUrl.href,
+  function (gltf) {
+    const model = gltf.scene;
+    scene.add(model);
+    mixer = new THREE.AnimationMixer(model);
+    const clips = gltf.animations;
+
+    clips.forEach(function (clip) {
+      const action = mixer.clipAction(clip);
+      action.play();
+    });
+  },
+  undefined,
+  function (error) {
+    console.error(error);
+  }
+);
+
+const clock = new THREE.Clock();
 
 /* 렌더링 */
 function animate() {
+  if (mixer) mixer.update(clock.getDelta());
   renderer.render(scene, camera);
 }
+
 renderer.setAnimationLoop(animate);
 
 /* 반응형 */

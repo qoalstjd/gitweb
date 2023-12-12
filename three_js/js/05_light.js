@@ -14,7 +14,7 @@ camera.position.set(0, 1, 3);
 camera.lookAt(new THREE.Vector3(0, 0, 0));
 
 // 렌더러
-const renderer = new THREE.WebGL1Renderer({ alpha: true, antialias: true });
+const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
 renderer.setSize(window.innerWidth, window.innerHeight);
 
 document.getElementById("webgl-wrap").appendChild(renderer.domElement);

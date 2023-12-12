@@ -17,7 +17,7 @@ camera.position.set(0, 1, 5);
 camera.lookAt(new THREE.Vector3(0, 0, 0));
 
 // 렌더러
-const renderer = new THREE.WebGL1Renderer({ alpha: true, antialias: true });
+const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
 renderer.setSize(window.innerWidth, window.innerHeight);
 renderer.shadowMap.enabled = true;
 document.getElementById("webgl-wrap").appendChild(renderer.domElement);
@@ -34,12 +34,12 @@ scene.add(ambientLight);
 
 // 배경
 const skyMaterialArray = [];
-const texture_ft = new THREE.TextureLoader().load("img/dusk_ft.jpg");
-const texture_bk = new THREE.TextureLoader().load("img/dusk_bk.jpg");
-const texture_up = new THREE.TextureLoader().load("img/dusk_up.jpg");
-const texture_dn = new THREE.TextureLoader().load("img/dusk_dn.jpg");
-const texture_rt = new THREE.TextureLoader().load("img/dusk_rt.jpg");
-const texture_lf = new THREE.TextureLoader().load("img/dusk_lf.jpg");
+const texture_ft = new THREE.TextureLoader().load("img/basic/dusk_ft.jpg");
+const texture_bk = new THREE.TextureLoader().load("img/basic/dusk_bk.jpg");
+const texture_up = new THREE.TextureLoader().load("img/basic/dusk_up.jpg");
+const texture_dn = new THREE.TextureLoader().load("img/basic/dusk_dn.jpg");
+const texture_rt = new THREE.TextureLoader().load("img/basic/dusk_rt.jpg");
+const texture_lf = new THREE.TextureLoader().load("img/basic/dusk_lf.jpg");
 skyMaterialArray.push(
   new THREE.MeshStandardMaterial({
     map: texture_ft,

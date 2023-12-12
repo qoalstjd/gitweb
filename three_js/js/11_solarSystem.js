@@ -16,7 +16,7 @@ const neptuneTexture = "img/solar_system/neptune.jpg";
 const plutoTexture = "img/solar_system/pluto.jpg";
 
 /* 렌더러 */
-const renderer = new THREE.WebGL1Renderer({ antialias: true });
+const renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.getElementById("webgl-wrap").appendChild(renderer.domElement);
 

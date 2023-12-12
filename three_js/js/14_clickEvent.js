@@ -25,20 +25,41 @@ const orbit = new OrbitControls(camera, renderer.domElement);
 camera.position.set(6, 8, 14);
 orbit.update();
 
-/* 그리드Helper */
-const gridHelper = new THREE.GridHelper(12, 12);
-scene.add(gridHelper);
-
 /* 각Helper */
 const axesHelper = new THREE.AxesHelper(4);
 scene.add(axesHelper);
 
 /* 빛 */
-const directionalLight = new THREE.DirectionalLight(0xffffff, 0.8);
+const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
 scene.add(directionalLight);
 directionalLight.position.set(0, 50, 0);
 
-/* 오브젝트 */
+/* 클릭이벤트 */
+var mouse = new THREE.Vector2();
+var plane = new THREE.Plane();
+var planeNormal = new THREE.Vector3();
+var intersectionPoint = new THREE.Vector3();
+var raycaster = new THREE.Raycaster();
+
+window.addEventListener("mousemove", function (e) {
+  mouse.x = (e.clientX / window.innerWidth) * 2 - 1;
+  mouse.y = -(e.clientY / window.innerHeight) * 2 + 1;
+  planeNormal.copy(camera.position).normalize();
+  plane.setFromNormalAndCoplanarPoint(planeNormal, scene.position);
+  raycaster.setFromCamera(mouse, camera);
+  raycaster.ray.intersectPlane(plane, intersectionPoint);
+});
+window.addEventListener("click", function (e) {
+  const sphereGeo = new THREE.SphereGeometry(0.125, 30, 30);
+  const sphereMat = new THREE.MeshStandardMaterial({
+    color: 0x0099ff,
+    metalness: 0.5,
+    roughness: 0,
+  });
+  const sphereMesh = new THREE.Mesh(sphereGeo, sphereMat);
+  scene.add(sphereMesh);
+  sphereMesh.position.copy(intersectionPoint);
+});
 
 /* 렌더링 */
 function animate() {

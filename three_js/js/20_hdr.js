@@ -3,7 +3,7 @@ import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 import { RGBELoader } from "three/addons/loaders/RGBELoader.js";
 
 const hdrTextureURL = new URL(
-  "three_js/img/MR_INT-003_Kitchen_Pierre.hdr",
+  "/img/MR_INT-003_Kitchen_Pierre.hdr",
   import.meta.url
 );
 
@@ -20,7 +20,7 @@ camera.position.set(0, 1, 5);
 camera.lookAt(new THREE.Vector3(0, 0, 0));
 
 // 렌더러
-const renderer = new THREE.WebGL1Renderer({ alpha: true, antialias: true });
+const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
 renderer.setSize(window.innerWidth, window.innerHeight);
 renderer.outputColorSpace = THREE.SRGBColorSpace;
 renderer.toneMapping = THREE.ACESFilmicToneMapping;
