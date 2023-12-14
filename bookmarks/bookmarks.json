@@ -3,56 +3,63 @@
     "title": "Semantic-ui",
     "url": "https://semantic-ui.com/introduction/getting-started.html",
     "description": "UI-docs 참고용",
-    "category": "UI",
+    "category": "ui",
     "date_added": "2023-11-20"
   },
   {
     "title": "XP.css",
     "url": "https://botoxparty.github.io/XP.css/",
     "description": "WindowsXP 기반 UI 도큐먼트",
-    "category": "UI",
+    "category": "ui",
     "date_added": "2023-11-20"
   },
   {
     "title": "XP",
     "url": "https://pohwp.dev/",
     "description": "WindowsXP 기반 포트폴리오",
-    "category": "포트폴리오",
+    "category": "portpoilio",
     "date_added": "2023-11-20"
   },
   {
     "title": "XP",
     "url": "https://winxp.vercel.app/",
     "description": "WindowsXP 기반 포트폴리오",
-    "category": "포트폴리오",
+    "category": "portpoilio",
     "date_added": "2023-11-20"
   },
   {
     "title": "유사마리오",
     "url": "http://www.rleonardi.com/interactive-resume/",
     "description": "WindowsXP 기반 포트폴리오",
-    "category": "포트폴리오",
+    "category": "portpoilio",
     "date_added": "2023-11-22"
   },
   {
     "title": "codyhouse",
     "url": "https://codyhouse.co/ds/components",
     "description": "UI 디자인가이드 모음",
-    "category": "UI",
+    "category": "ui",
     "date_added": "2023-12-02"
   },
   {
     "title": "OpenGameArt",
     "url": "https://opengameart.org/art-search-advanced?keys=&field_art_type_tid%5B%5D=14&sort_by=count&sort_order=DESC",
     "description": "스카이박스 참고용",
-    "category": "Three.js",
+    "category": "three",
     "date_added": "2023-12-10"
   },
   {
     "title": "quaternius",
     "url": "https://quaternius.com/",
     "description": "Mesh 모델들",
-    "category": "Three.js",
+    "category": "three",
+    "date_added": "2023-12-12"
+  },
+  {
+    "title": "David|CreativeDeveloper",
+    "url": "https://www.david-hckh.com/",
+    "description": "포트폴리오 참고용",
+    "category": "three",
     "date_added": "2023-12-12"
   }
 ]
